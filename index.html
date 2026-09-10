@@ -357,7 +357,10 @@ const COURS_SOURCE = {
     "Cours-fondamentaux-Spring.pdf",
     "Spring-Test.pdf"
   ],
-  "GL": [],
+  "GL": [
+    "resume_cycles_de_vie.pdf",
+    "TDcyclesDeVie2020.pdf"
+  ],
   "AFMP": [
     "Donnees_en_Merise.pdf"
   ],
@@ -640,6 +643,13 @@ const FICHES = {
     resume: "<div class='fiche-sources'><strong>📎 PDF associé à ce chapitre :</strong><ul class='fiche-ul'><li>COURS N°8 SEUIL DE RENTABILITE.pdf</li></ul></div> <h3 class='fiche-h1'>1. Rappels : charges fixes et charges variables</h3> <div class='fiche-grid2'> <div class='fiche-box box-blue'><div class='fbx-title'>Charges fixes (CF)</div><ul><li>Montant identique quel que soit le niveau d'activité</li><li><em>Ex : loyer, assurances, amortissements</em></li></ul></div> <div class='fiche-box box-purple'><div class='fbx-title'>Charges variables (CV)</div><ul><li>Évoluent proportionnellement au volume d'activité</li><li><em>Ex : matières premières, commissions</em></li></ul></div> </div> <h3 class='fiche-h1'>2. Formules fondamentales (à connaître par coeur)</h3> <div class='fiche-formula-box'> <div class='ffb-line'><span class='term-blue'>MSCV</span> = Chiffre d'affaires − Charges variables</div> <div class='ffb-line'>Taux de MSCV = MSCV / Chiffre d'affaires</div> <div class='ffb-line'><span class='term-green'>Résultat</span> = MSCV − Charges fixes <em>(= CA − CV − CF)</em></div> <div class='ffb-line'><span class='term-orange'>Seuil de rentabilité (valeur)</span> = Charges fixes / Taux de MSCV</div> <div class='ffb-line'>Seuil de rentabilité (volume) = SR valeur / Prix de vente unitaire</div> <div class='ffb-line'><span class='term-purple'>Point mort</span> = (SR / CA) × 360 jours <em>(date d'atteinte du seuil dans l'année)</em></div> <div class='ffb-line'>Marge de sécurité = Chiffre d'affaires − Seuil de rentabilité</div> <div class='ffb-line'>Indice de sécurité = Marge de sécurité / Chiffre d'affaires</div> </div> <div class='fiche-diagram-frame'><p class='fiche-p' style='text-align:center;font-weight:700;margin-bottom:0;'>Représentation graphique du seuil de rentabilité (exemple du jouet en bois)</p> <svg viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:480px;display:block;margin:10px auto;\"> <polygon points=\"60.0,280.0 60.0,140.25 305.9,140.25\" fill=\"#FBE4E4\" opacity=\"0.7\"/> <polygon points=\"305.9,140.25 460.0,52.7 460.0,140.25\" fill=\"#E4F5E8\" opacity=\"0.7\"/> <line x1=\"60.0\" y1=\"280.0\" x2=\"470.0\" y2=\"280.0\" stroke=\"#333\" stroke-width=\"1.4\"/> <line x1=\"60.0\" y1=\"280.0\" x2=\"60.0\" y2=\"10\" stroke=\"#333\" stroke-width=\"1.4\"/> <line x1=\"60.0\" y1=\"280.0\" x2=\"460.0\" y2=\"52.7\" stroke=\"#2F6FB0\" stroke-width=\"2.2\"/> <line x1=\"60.0\" y1=\"140.25\" x2=\"460.0\" y2=\"140.25\" stroke=\"#C97A1F\" stroke-width=\"2.2\"/> <line x1=\"305.9\" y1=\"140.25\" x2=\"305.9\" y2=\"280.0\" stroke=\"#6B4E9E\" stroke-width=\"1.3\" stroke-dasharray=\"4,3\"/> <circle cx=\"305.9\" cy=\"140.25\" r=\"4\" fill=\"#6B4E9E\"/> <text x=\"305.9\" y=\"296.0\" font-size=\"11\" fill=\"#6B4E9E\" text-anchor=\"middle\" font-weight=\"700\">SR ≈ 9 838€</text> <text x=\"70\" y=\"98.25\" font-size=\"11\" fill=\"#8A2424\" font-weight=\"700\">Zone de pertes</text> <text x=\"335.9\" y=\"70\" font-size=\"11\" fill=\"#1E6B37\" font-weight=\"700\">Zone de bénéfices</text> <text x=\"420.0\" y=\"44.7\" font-size=\"10.5\" fill=\"#2F6FB0\" font-weight=\"700\">MSCV</text> <text x=\"430.0\" y=\"132.2\" font-size=\"10.5\" fill=\"#C97A1F\" font-weight=\"700\">CF</text> <text x=\"260.0\" y=\"310.0\" font-size=\"11\" fill=\"#333\" text-anchor=\"middle\">Chiffre d'affaires (CA)</text> <text x=\"18\" y=\"150\" font-size=\"11\" fill=\"#333\" transform=\"rotate(-90 18 150)\" text-anchor=\"middle\">Coûts, marges (€)</text> </svg> </div><h3 class='fiche-h1'>3. Interprétation</h3> <div class='fiche-grid3'> <div class='fiche-box box-yellow'><div class='fbx-title'>CA = SR</div><ul><li>Résultat = 0</li><li>Ni bénéfice ni perte</li></ul></div> <div class='fiche-box box-green'><div class='fbx-title'>CA &gt; SR</div><ul><li><span class='fiche-tag tag-green'>Bénéfice</span></li></ul></div> <div class='fiche-box box-orange'><div class='fbx-title'>CA &lt; SR</div><ul><li><span class='fiche-tag tag-red'>Perte</span></li></ul></div> </div> <h3 class='fiche-h1'>4. Représentation graphique</h3> <p class='fiche-p'>Sur un graphique (abscisses = chiffre d'affaires, ordonnées = coûts/marges en euros), on trace la droite de la marge sur coût variable (y₁ = ax, proportionnelle au CA) et la droite des charges fixes (y₂ = b, horizontale, constante). Le seuil de rentabilité est le point d'intersection de ces deux droites : à gauche, \"zone de pertes\" (MSCV &lt; CF) ; à droite, \"zone de bénéfices\" (MSCV &gt; CF).</p> <h3 class='fiche-h1'>5. Les leviers pour améliorer la rentabilité</h3> <div class='fiche-grid3'> <div class='fiche-box box-blue'><div class='fbx-title'>↓ Charges fixes</div><ul><li>Sous-traiter certains investissements</li><li>Variabiliser la masse salariale (intérim, externalisation)</li></ul></div> <div class='fiche-box box-purple'><div class='fbx-title'>↓ Charges variables</div><ul><li>Renégocier les achats</li><li>Réduire les pertes/déchets de production</li></ul></div> <div class='fiche-box box-green'><div class='fbx-title'>↑ Chiffre d'affaires</div><ul><li>Hausse des prix de vente</li><li>Développement commercial, nouveaux marchés</li></ul></div> </div>",
     fiche: "<h3 class='fiche-h1'>Les formules du seuil de rentabilité</h3> <table class='fiche-table'><thead><tr><th>Notion</th><th>Formule</th></tr></thead><tbody> <tr><td>MSCV</td><td>CA − CV</td></tr> <tr><td>Taux de MSCV</td><td>MSCV / CA</td></tr> <tr><td>SR (valeur)</td><td>CF / Taux de MSCV</td></tr> <tr><td>SR (volume)</td><td>SR valeur / PV unitaire</td></tr> <tr><td>Point mort</td><td>(SR/CA) × 360j</td></tr> <tr><td>Marge de sécurité</td><td>CA − SR</td></tr> </tbody></table> <h3 class='fiche-h1'>3 leviers pour améliorer la rentabilité</h3> <p class='fiche-p'>↓ Charges fixes (sous-traiter, variabiliser la masse salariale) / ↓ Charges variables (renégocier, réduire les pertes) / ↑ Chiffre d'affaires (prix, développement commercial).</p> <h3 class='fiche-h1'>Graphiquement</h3> <p class='fiche-p'>Le SR est le point d'intersection entre la droite de la MSCV (croissante) et la droite des charges fixes (constante). À gauche : zone de pertes. À droite : zone de bénéfices.</p>",
     corriges: "<h3 class='fiche-h1'>Exercice corrigé 1 — Jouet en bois</h3> <p class='fiche-p'>Données : Prix de vente unitaire = 35€ ; Quantité vendue = 450 unités ; Charge variable unitaire = 19,70€ ; Charges fixes = 4 300€.</p> <table class='fiche-table'><thead><tr><th>Élément</th><th>Montant</th><th>% du CA</th></tr></thead><tbody> <tr><td>Chiffre d'affaires</td><td>15 750,00€</td><td>100%</td></tr> <tr><td>− Coûts variables</td><td>−8 865,00€</td><td>56,29%</td></tr> <tr><td>= MSCV</td><td>6 885,00€</td><td>43,71% (taux de MSCV)</td></tr> <tr><td>− Charges fixes</td><td>−4 300,00€</td><td>Valable quel que soit le CA</td></tr> <tr><td>= Résultat</td><td>2 585,00€</td><td></td></tr> </tbody></table> <ul class='fiche-ul'> <li><strong>SR en valeur</strong> = 4 300 / 0,4371 = 9 837,57€</li> <li><strong>SR en volume</strong> = 9 837,57 / 35 = 281 jouets</li> <li><strong>Point mort</strong> = (9 837,57 / 15 750) × 360 ≈ 224,9 jours ≈ 7,5 mois, soit autour du 15 août</li> <li><strong>Marge de sécurité</strong> = 15 750 − 9 837,57 = 5 912,43€</li> <li><strong>Indice de sécurité</strong> = 5 912,43 / 15 750 ≈ 37,54%</li> </ul> <h3 class='fiche-h1'>Exercice corrigé 2 — Entreprise Montagne</h3> <table class='fiche-table'><thead><tr><th>Élément</th><th>Montant</th><th>% du CA</th></tr></thead><tbody> <tr><td>Chiffre d'affaires</td><td>2 300 000€</td><td>100%</td></tr> <tr><td>Charges variables</td><td>1 650 000€</td><td>71,7%</td></tr> <tr><td>Marge sur coûts variables</td><td>650 000€</td><td>28,3%</td></tr> <tr><td>Charges fixes</td><td>550 000€</td><td></td></tr> <tr><td><strong>Résultat</strong></td><td><strong>100 000€</strong></td><td>4,3%</td></tr> </tbody></table> <ol class='fiche-ul'> <li><strong>SR</strong> = 550 000 / 0,283 = 1 943 463€</li> <li><strong>Marge de sécurité</strong> = 2 300 000 − 1 943 463 = 356 537€</li> <li><strong>Interprétation</strong> : le chiffre d'affaires (2 300 000€) est nettement supérieur au SR (1 943 463€) : l'entreprise est largement bénéficiaire et dispose d'une marge de sécurité confortable (356 537€, soit environ 15,5% du CA) avant de repasser en zone de perte.</li> <li><strong>Pour améliorer encore sa rentabilité</strong>, l'entreprise peut agir sur 3 leviers : diminuer les charges fixes, diminuer les charges variables, ou augmenter le chiffre d'affaires (voir résumé du chapitre).</li> </ol> <h3 class='fiche-h1'>QCM corrigé (8 questions types examen)</h3> <table class='fiche-table'><thead><tr><th>#</th><th>Question (résumée)</th><th>Bonne(s) réponse(s)</th></tr></thead><tbody> <tr><td>1</td><td>Formule du SR en valeur</td><td>Charges fixes / Taux de MSCV</td></tr> <tr><td>2</td><td>Le calcul du SR nécessite...</td><td>La MSCV et les charges fixes (équivalent à : CA, charges variables ET charges fixes)</td></tr> <tr><td>3</td><td>Le résultat par variabilité se calcule...</td><td>CA − CV − CF, équivalent à MSCV − CF</td></tr> <tr><td>4</td><td>La marge sur coût variable est égale à...</td><td>Chiffre d'affaires − charges variables</td></tr> <tr><td>5</td><td>Le seuil de rentabilité représente...</td><td>Le CA à partir duquel l'activité devient bénéficiaire</td></tr> <tr><td>6</td><td>Le calcul du point mort permet de déterminer...</td><td>La date à partir de laquelle l'entreprise commence à réaliser des bénéfices</td></tr> <tr><td>7</td><td>Sur le graphique, le SR est atteint quand...</td><td>Les droites des charges fixes et de la MSCV se croisent</td></tr> <tr><td>8</td><td>La marge de sécurité est égale à...</td><td>Chiffre d'affaires − seuil de rentabilité</td></tr> </tbody></table>"
+  },
+  'gl-cycles-de-vie': {
+    matiere: "GL (Génie Logiciel)",
+    chapitre: "Les cycles de vie d'un projet logiciel",
+    resume: "<div class='fiche-sources'><strong>📎 PDF associé à ce chapitre :</strong><ul class='fiche-ul'><li>resume_cycles_de_vie.pdf</li></ul></div> <p class='fiche-p'><strong>Définition &amp; Utilité :</strong> le cycle de vie représente l'ensemble des étapes de développement d'un logiciel. Il sert à structurer la <em>planification et la gestion</em>, garantir le <em>contrôle de la qualité</em>, fluidifier la <em>communication</em> et identifier les <em>métiers et compétences</em> requis à chaque étape.</p> <h3 class='fiche-h1'>1. Le Cycle en V (modèle séquentiel)</h3> <p class='fiche-p'>Le cycle en V est une évolution du modèle en cascade. Sa force réside dans la symétrie absolue entre la phase descendante (conception et formalisation) et la phase montante (validation et qualification). Chaque niveau de conception prépare directement ses jeux de tests associés.</p> <div class='fiche-diagram-frame'> <p class='fiche-p' style='text-align:center;font-weight:700;margin-bottom:0;'>Figure 1 — Structure rigoureuse du Cycle en V et correspondance conception ↔ validation</p> <svg viewBox=\"0 0 600 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:580px;display:block;margin:10px auto;\"> <defs><marker id=\"arrowV\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#C0392B\"/></marker></defs> <rect x=\"20\" y=\"30\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#1F3A5F\" stroke=\"#1F3A5F\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"54.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Analyse des</tspan><tspan x=\"95.0\" dy=\"14\">besoins</tspan></text><rect x=\"20\" y=\"100\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#2F6FB0\" stroke=\"#2F6FB0\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"124.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Spécifications</tspan><tspan x=\"95.0\" dy=\"14\">externes</tspan></text><rect x=\"20\" y=\"170\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#4A8FD1\" stroke=\"#4A8FD1\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"194.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Conception</tspan><tspan x=\"95.0\" dy=\"14\">globale</tspan></text><rect x=\"20\" y=\"240\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#7FB3E8\" stroke=\"#7FB3E8\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"264.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Conception</tspan><tspan x=\"95.0\" dy=\"14\">détaillée</tspan></text><rect x=\"430\" y=\"30\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#1E6B37\" stroke=\"#1E6B37\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"54.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test</tspan><tspan x=\"505.0\" dy=\"14\">d'acceptation</tspan></text><rect x=\"430\" y=\"100\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#2E8B4E\" stroke=\"#2E8B4E\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"124.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test</tspan><tspan x=\"505.0\" dy=\"14\">système</tspan></text><rect x=\"430\" y=\"170\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#3FAE68\" stroke=\"#3FAE68\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"194.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test</tspan><tspan x=\"505.0\" dy=\"14\">d'intégration</tspan></text><rect x=\"430\" y=\"240\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#6FC98C\" stroke=\"#6FC98C\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"264.5\" font-size=\"10.5\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test</tspan><tspan x=\"505.0\" dy=\"14\">unitaire</tspan></text><line x1=\"170\" y1=\"57.5\" x2=\"430\" y2=\"57.5\" stroke=\"#C0392B\" stroke-width=\"1.6\" stroke-dasharray=\"5,4\" marker-end=\"url(#arrowV)\"/><line x1=\"170\" y1=\"127.5\" x2=\"430\" y2=\"127.5\" stroke=\"#C0392B\" stroke-width=\"1.6\" stroke-dasharray=\"5,4\" marker-end=\"url(#arrowV)\"/><line x1=\"170\" y1=\"197.5\" x2=\"430\" y2=\"197.5\" stroke=\"#C0392B\" stroke-width=\"1.6\" stroke-dasharray=\"5,4\" marker-end=\"url(#arrowV)\"/><line x1=\"170\" y1=\"267.5\" x2=\"430\" y2=\"267.5\" stroke=\"#C0392B\" stroke-width=\"1.6\" stroke-dasharray=\"5,4\" marker-end=\"url(#arrowV)\"/><rect x=\"250\" y=\"320\" width=\"100\" height=\"42\" rx=\"7\" fill=\"#111\" stroke=\"#111\" stroke-width=\"1.4\"/><text x=\"300.0\" y=\"345.0\" font-size=\"11\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><tspan x=\"300.0\" dy=\"0\">CODAGE</tspan></text><line x1=\"170\" y1=\"295\" x2=\"250\" y2=\"341.0\" stroke=\"#888\" stroke-width=\"1.6\"/><line x1=\"430\" y1=\"295\" x2=\"350\" y2=\"341.0\" stroke=\"#888\" stroke-width=\"1.6\"/><text x=\"300.0\" y=\"22\" font-size=\"9.5\" font-style=\"italic\" fill=\"#C0392B\" text-anchor=\"middle\">Préparation précoce des tests</text> </svg> </div> <div class='fiche-grid2'> <div class='fiche-box box-blue'><div class='fbx-title'>Caractéristiques &amp; répartition des efforts</div><ul> <li><strong>Besoins + Spécifications :</strong> 30 à 40% de l'effort total</li> <li><strong>Architecture &amp; Codage :</strong> 20 à 30% du temps</li> <li><strong>Tests &amp; Qualification :</strong> 30 à 40% (souvent sous-estimé !)</li> <li><strong>Effet tunnel &amp; coût du retour en arrière :</strong> revenir sur une étape antérieure est extrêmement coûteux, voire impossible (dispersion des équipes/prestataires). En cas d'erreur majeure, c'est l'échec ou la livraison d'une version tronquée.</li> </ul></div> <div class='fiche-box box-yellow'><div class='fbx-title'>Quand l'utiliser ? (domaines d'application)</div><ul> <li>Besoins initiaux et technologies parfaitement <strong>stables et maîtrisés</strong></li> <li>Industrialisation d'un prototype validé ou reproduction d'un système déjà connu</li> <li><strong>Systèmes critiques et normés :</strong> imposé par des réglementations strictes comme la norme <strong>EN 50128</strong> (systèmes ferroviaires de signalisation et de protection) qui fixe des livrables et activités formels</li> </ul></div> </div> <h3 class='fiche-h1'>2. Les cycles itératifs &amp; incrémentaux</h3> <p class='fiche-p'>Face aux limites de la rigidité séquentielle, les démarches itératives permettent de repasser plusieurs fois par les mêmes phases de développement, offrant une flexibilité progressive.</p> <div class='fiche-grid3'> <div class='fiche-box box-blue'><div class='fbx-title'>Cycle incrémental</div><ul> <li>Découpage du produit en sous-ensembles fonctionnels (incréments). On itère sur la boucle <em>Conception → Codage → Test</em></li> <li>Permet d'absorber les retards et de s'adapter aux pertes de temps</li> <li>Les livraisons intermédiaires régulières rassurent le client</li> </ul></div> <div class='fiche-box box-purple'><div class='fbx-title'>Cycle en spirale (Boehm 1988)</div><ul> <li>Approche centrée sur la <strong>réduction méthodique des risques</strong>. Chaque tour agrandit l'envergure du projet :</li> <li><em>Quadrant 1 :</em> détermination des objectifs</li> <li><em>Quadrant 2 :</em> résolution des risques</li> <li><em>Quadrant 3 :</em> développement &amp; tests</li> <li><em>Quadrant 4 :</em> planification du cycle suivant</li> </ul></div> <div class='fiche-box box-green'><div class='fbx-title'>DevOps &amp; cycles continus</div><ul> <li>Intègre au cycle de développement continu (Plan, Create, Verify, Package) les activités opérationnelles :</li> <li>Déploiement (Release)</li> <li>Exploitation (Configure)</li> <li>Surveillance &amp; retours (Monitor)</li> <li>Boucle de rétroaction en continu</li> </ul></div> </div> <div class='fiche-diagram-frame'> <p class='fiche-p' style='text-align:center;font-weight:700;margin-bottom:0;'>Figure 2 — Modèle en spirale de Barry Boehm axé sur la maîtrise des risques</p> <svg viewBox=\"0 0 600 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:520px;display:block;margin:10px auto;\"> <line x1=\"20\" y1=\"200\" x2=\"580\" y2=\"200\" stroke=\"#ccc\" stroke-width=\"1\"/> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"380\" stroke=\"#ccc\" stroke-width=\"1\"/> <polyline points=\"300.0,194.0 300.4,193.5 300.8,193.0 301.4,192.5 301.9,192.1 302.6,191.7 303.3,191.3 304.0,191.0 304.8,190.8 305.6,190.6 306.5,190.5 307.4,190.5 308.3,190.6 309.2,190.7 310.2,190.9 311.1,191.2 312.1,191.5 313.0,192.0 313.9,192.5 314.9,193.2 315.8,193.9 316.6,194.7 317.4,195.5 318.2,196.5 318.9,197.5 319.6,198.6 320.2,199.8 320.7,201.0 321.1,202.3 321.5,203.7 321.8,205.1 322.0,206.5 322.0,208.0 322.0,209.5 321.9,211.1 321.7,212.6 321.3,214.2 320.9,215.8 320.3,217.4 319.6,219.0 318.8,220.5 317.9,222.0 316.9,223.5 315.7,224.9 314.5,226.3 313.1,227.6 311.6,228.8 310.0,230.0 308.4,231.1 306.6,232.1 304.7,232.9 302.8,233.7 300.8,234.4 298.7,234.9 296.6,235.3 294.4,235.6 292.1,235.7 289.9,235.7 287.6,235.5 285.2,235.2 282.9,234.8 280.6,234.1 278.3,233.4 276.0,232.5 273.7,231.4 271.5,230.1 269.4,228.8 267.3,227.2 265.3,225.5 263.4,223.7 261.5,221.7 259.8,219.6 258.2,217.4 256.7,215.0 255.4,212.6 254.2,210.0 253.1,207.3 252.2,204.5 251.5,201.7 250.9,198.7 250.5,195.8 250.3,192.7 250.3,189.6 250.5,186.5 250.9,183.4 251.5,180.3 252.3,177.2 253.2,174.1 254.4,171.1 255.8,168.1 257.4,165.1 259.1,162.3 261.1,159.5 263.2,156.8 265.5,154.2 268.0,151.8 270.7,149.5 273.6,147.4 276.5,145.4 279.7,143.5 282.9,141.9 286.3,140.5 289.8,139.2 293.4,138.2 297.1,137.3 300.9,136.7 304.7,136.4 308.6,136.2 312.5,136.3 316.5,136.6 320.4,137.2 324.3,138.1 328.2,139.1 332.1,140.5 335.9,142.0 339.6,143.8 343.2,145.9 346.8,148.2 350.2,150.7 353.5,153.4 356.6,156.4 359.5,159.5 362.3,162.9 364.9,166.4 367.3,170.2 369.5,174.1 371.5,178.1 373.2,182.3 374.6,186.6 375.8,191.1 376.8,195.6 377.5,200.2 377.8,204.9 378.0,209.6 377.8,214.4 377.3,219.1 376.5,223.9 375.5,228.6 374.1,233.3 372.5,238.0 370.5,242.5 368.3,247.0 365.8,251.3 363.0,255.6 360.0,259.6 356.6,263.5 353.1,267.2 349.3,270.7 345.2,274.0 340.9,277.1 336.5,279.9 331.8,282.4 327.0,284.7 322.0,286.7 316.9,288.4 311.6,289.8 306.2,290.9 300.8,291.6 295.3,292.1 289.7,292.2 284.1,291.9 278.5,291.3 272.9,290.4 267.3,289.1 261.8,287.5 256.4,285.5 251.1,283.2 245.9,280.6 240.8,277.7 235.9,274.4 231.2,270.8 226.7,266.9 222.4,262.7 218.3,258.3 214.5,253.6 211.0,248.6 207.7,243.4 204.8,238.0 202.1,232.4 199.8,226.6 197.9,220.7 196.3,214.6 195.1,208.4 194.2,202.1 193.7,195.7 193.6,189.3 193.9,182.9 194.6,176.4 195.7,170.0 197.1,163.6 199.0,157.3 201.3,151.1 203.9,145.0 206.9,139.0 210.3,133.2 214.0,127.6 218.1,122.2 222.6,117.1 227.3,112.2 232.4,107.5 237.8,103.2 243.4,99.1 249.3,95.4 255.5,92.1 261.9,89.1 268.4,86.5 275.2,84.3 282.1,82.5 289.1,81.0 296.2,80.1 303.4,79.5 310.7,79.4 318.0,79.7 325.3,80.5 332.6,81.7 339.8,83.3 346.9,85.4 353.9,87.9 360.8,90.9 367.5,94.3 374.1,98.1\" fill=\"none\" stroke=\"#2F6FB0\" stroke-width=\"2.4\"/> <text x=\"30\" y=\"40\" font-size=\"11\" font-weight=\"700\" fill=\"#2F6FB0\" text-anchor=\"start\">1. DÉTERMINATION DES OBJECTIFS</text><text x=\"340\" y=\"40\" font-size=\"11\" font-weight=\"700\" fill=\"#C97A1F\" text-anchor=\"start\">2. ANALYSE & GESTION DES RISQUES</text><text x=\"30\" y=\"370\" font-size=\"11\" font-weight=\"700\" fill=\"#6B4E9E\" text-anchor=\"start\">4. PLANIFICATION CYCLE SUIVANT</text><text x=\"340\" y=\"370\" font-size=\"11\" font-weight=\"700\" fill=\"#2E8B4E\" text-anchor=\"start\">3. DÉVELOPPEMENT & VALIDATION</text> </svg> </div> <h3 class='fiche-h1'>3. Méthodes agiles : forces &amp; regard critique</h3> <p class='fiche-p'>Les méthodes agiles reposent sur l'idée <em>« Design a little, code a little »</em> : chaque cycle réalise un mini-développement complet, acceptant les changements d'exigences et fournissant un livrable exécutable régulier. Cependant, le support insiste sur une <strong>analyse nuancée</strong> des risques de dérive.</p> <div class='fiche-grid2'> <div class='fiche-box box-green'><div class='fbx-title'>✔ Avantages &amp; facteurs de succès avérés</div><ul> <li>Adaptation permanente aux changements de besoins du client</li> <li>Disponibilité immédiate d'un logiciel exécutable à chaque sprint</li> <li>TDD (Test-Driven Development) assurant une meilleure qualité du code</li> <li>Fort taux de succès sur les projets de taille modeste (&lt; 1M$, ~76% de réussite selon le Standish Group)</li> <li>Implication et engagement direct des utilisateurs finaux</li> </ul></div> <div class='fiche-box box-orange'><div class='fbx-title'>✘ Limites &amp; pièges (vision à court terme)</div><ul> <li><strong>Architecture fragile :</strong> <em>« Un gratte-ciel n'est pas un empilement de maisons »</em> — l'architecture globale d'un grand système émerge difficilement de micro-sprints sans vision d'ensemble</li> <li><strong>Contrats au forfait :</strong> très difficile à concilier (souvent cantonné à la régie). Date de fin souvent floue</li> <li><strong>Déficit de documentation :</strong> risque majeur pour les logiciels à longue durée de vie dès que l'équipe d'origine se disperse</li> <li><strong>« Chacun fait son marché » :</strong> risque d'adopter des rituels de surface (daily standup) sans réelle culture agile</li> </ul></div> </div> <h3 class='fiche-h1'>4. Modèles complémentaires : prototypage, cycle en W et cycle en Y</h3> <div class='fiche-grid2'> <div class='fiche-box box-blue'><div class='fbx-title'>Prototype vs Maquette (ne pas confondre !)</div><ul> <li><strong>Prototype :</strong> offre les fonctionnalités principales réelles du système, mais sur une architecture provisoire. <ul><li><em>Exploratoire :</em> destiné à tester la faisabilité, a priori jetable</li><li><em>Évolutif :</em> devient le socle du 1er incrément logiciel</li></ul> </li> <li><strong>Maquette :</strong> ne présente que l'aspect visuel / ergonomique sans aucune logique métier fonctionnelle</li> <li><strong>Cycle en W :</strong> combine cycle en V et prototypage (phase de prototypage validée avant d'engager le développement final)</li> </ul></div> <div class='fiche-box box-purple'><div class='fbx-title'>Le cycle en Y (double branche)</div><ul> <li>Mène en parallèle et sur un pied d'égalité :</li> <li>La branche fonctionnelle (analyse des besoins &amp; spécifications)</li> <li>La branche technique (études de faisabilité, benchmarks technologiques, architecture)</li> <li>La conception globale fusionne ces deux dimensions, évitant de concevoir des spécifications irréalisables techniquement</li> </ul></div> </div> <h3 class='fiche-h1'>5. Guide de décision : comment choisir son cycle de vie ?</h3> <p class='fiche-p'>Le choix du cycle de vie n'est pas dogmatique mais dépend d'une analyse multicritère des caractéristiques du projet :</p> <table class='fiche-table'><thead><tr><th>Question clé / contexte projet</th><th>Modèle préconisé</th><th>Justification</th></tr></thead><tbody> <tr><td>Besoins stables, normes contraignantes, logiciel critique (ex : ferroviaire, médical)</td><td><span class='fiche-tag tag-blue'>Cycle en V</span></td><td>Rigueur documentaire, traçabilité des tests, conformité aux normes (EN 50128)</td></tr> <tr><td>Fortes incertitudes techniques ou risques d'échec élevés</td><td><span class='fiche-tag tag-purple'>Spirale ou Prototypage</span></td><td>Sécurisation progressive par levée systématique des risques à chaque tour</td></tr> <tr><td>Technologies nouvelles non maîtrisées mais besoin fonctionnel clair</td><td><span class='fiche-tag tag-orange'>Cycle en Y</span></td><td>Permet de qualifier la faisabilité technique en parallèle du recueil des besoins</td></tr> <tr><td>Projet innovant, besoins mouvants, client disponible, logiciel à évolution rapide</td><td><span class='fiche-tag tag-green'>Agile (Scrum / Kanban)</span></td><td>Feedback continu, livraison rapide de versions exécutables exploitables</td></tr> <tr><td>Projet académique ou d'envergure moyenne avec gestion du risque de temps</td><td><span class='fiche-tag tag-red'>Cycle incrémental</span></td><td>Permet de réajuster le périmètre selon les aléas et d'assurer des livraisons tangibles</td></tr> </tbody></table> <p class='fiche-note'><strong>Principe d'hybridation :</strong> les cycles ne sont pas mutuellement exclusifs. Il est tout à fait possible d'enrichir un cycle classique (en V ou incrémental) avec des pratiques agiles (stand-up quotidien, TDD, intégration continue) et des phases préliminaires de prototypage.</p>",
+    fiche: "<h3 class='fiche-h1'>Les cycles de vie à connaître</h3> <table class='fiche-table'><thead><tr><th>Cycle</th><th>Idée clé</th></tr></thead><tbody> <tr><td>En V</td><td>Symétrie conception/tests, séquentiel, effet tunnel si erreur</td></tr> <tr><td>Incrémental</td><td>Découpage en sous-ensembles fonctionnels livrés progressivement</td></tr> <tr><td>Spirale</td><td>Chaque tour = 1 risque levé (objectifs → risques → dev → planif)</td></tr> <tr><td>Agile</td><td>« Design a little, code a little », feedback continu, sprints</td></tr> <tr><td>En Y</td><td>Branche fonctionnelle + branche technique en parallèle</td></tr> <tr><td>En W</td><td>Cycle en V + phase de prototypage préalable</td></tr> <tr><td>DevOps</td><td>Plan/Create/Verify/Package + Release/Configure/Monitor en continu</td></tr> </tbody></table> <h3 class='fiche-h1'>Prototype ≠ Maquette</h3> <p class='fiche-p'>Prototype = fonctionnalités réelles sur archi provisoire (exploratoire ou évolutif). Maquette = aspect visuel seulement, aucune logique métier.</p> <h3 class='fiche-h1'>Le tableau de décision à retenir pour l'examen</h3> <table class='fiche-table'><thead><tr><th>Contexte</th><th>Modèle</th></tr></thead><tbody> <tr><td>Critique / normé / besoins stables</td><td>Cycle en V</td></tr> <tr><td>Fortes incertitudes techniques</td><td>Spirale / Prototypage</td></tr> <tr><td>Techno nouvelle + besoin clair</td><td>Cycle en Y</td></tr> <tr><td>Innovant, besoins mouvants, client dispo</td><td>Agile</td></tr> <tr><td>Envergure moyenne, risque de temps</td><td>Incrémental</td></tr> </tbody></table> <h3 class='fiche-h1'>5 critères de choix (méthode du TD)</h3> <ol class='fiche-ul'> <li>Le problème est-il facile à comprendre ? (sinon : prototypage ou cycle qui repasse par l'analyse des besoins)</li> <li>Les technologies sont-elles maîtrisées ? (sinon : cycle en Y, prototypage technique, ou incrémental pour absorber le risque de retard)</li> <li>Le logiciel doit-il durer longtemps ? (besoin de documentation → défavorable à l'agile pur)</li> <li>Le client est-il disponible/impatient ? (agile et incrémental rassurent un client impatient, mais demandent sa disponibilité)</li> <li>Quelle est la taille du logiciel ? (grande taille → incompatible avec l'agile pur, pousse vers l'incrémental)</li> </ol>",
+    corriges: "<div class='fiche-sources'><strong>📎 PDF associé à ce corrigé :</strong><ul class='fiche-ul'><li>TDcyclesDeVie2020.pdf (Yves Ledru et Sébastien Laborie, M1 MIAGE M2GI)</li></ul></div> <p class='fiche-note'>Ce TD ne fournit pas de corrigé officiel : les réponses ci-dessous sont une proposition argumentée, construite à partir des 5 critères de choix et du tableau de décision du cours (voir résumé). Pour chaque cas, retenir surtout la <strong>méthode de raisonnement</strong> (passer les 5 critères en revue) plutôt qu'une réponse \"par coeur\" — c'est ce qui est demandé (\"étayer vos réponses\").</p> <h3 class='fiche-h1'>Exercice 1 — Système de gestion des étudiants</h3> <table class='fiche-table'><thead><tr><th>Critère</th><th>Analyse</th></tr></thead><tbody> <tr><td>Problème compris ?</td><td>Oui — remplace un système déjà existant, le besoin est donc bien connu</td></tr> <tr><td>Technologies maîtrisées ?</td><td>Oui — la société de service a l'habitude de réaliser ce type de systèmes</td></tr> <tr><td>Longue durée de vie ?</td><td>Oui, au moins une dizaine d'années → besoin réel de documentation</td></tr> <tr><td>Client disponible ?</td><td>Motivé mais PAS disponible à temps plein (pas de détachement possible) → défavorable à l'agile, qui exige une forte implication du client</td></tr> <tr><td>Taille / urgence</td><td>Pas d'urgence, contraintes liées seulement au calendrier universitaire</td></tr> </tbody></table> <p class='fiche-p'><strong>Modèle recommandé : Cycle en V (ou cascade).</strong> Tous les indicateurs sont réunis : besoin bien compris, technologie maîtrisée, pas de contrainte de délai serrée, et surtout un client qui ne pourra pas s'impliquer au quotidien (incompatible avec l'agile). La bonne documentation exigée par les 10 ans de durée de vie est un point fort du cycle en V.</p> <h3 class='fiche-h1'>Exercice 2 — Application horaires de trains sur smartphone</h3> <table class='fiche-table'><thead><tr><th>Critère</th><th>Analyse</th></tr></thead><tbody> <tr><td>Problème compris ?</td><td>Partiellement — l'IHM doit être explorée pour s'adapter à la diversité des utilisateurs</td></tr> <tr><td>Technologies maîtrisées ?</td><td>NON pour l'interfaçage avec le SI SNCF (jamais travaillé pour une société ferroviaire) — c'est un risque technique clairement identifié, alors que le développement mobile lui-même est maîtrisé</td></tr> <tr><td>Longue durée de vie ?</td><td>Oui, la SNCF veut la proposer sur le long terme</td></tr> <tr><td>Client disponible ?</td><td>Non précisé, mais la SNCF est un partenaire industriel exigeant sur l'intégration</td></tr> </tbody></table> <p class='fiche-p'><strong>Modèle recommandé : Cycle en Y.</strong> C'est le cas d'école du cycle en Y : le besoin fonctionnel est assez clair (afficher des horaires), mais il existe un vrai risque technique isolé (l'interfaçage temps réel avec le SI SNCF) qu'il faut étudier en parallèle de la branche fonctionnelle (analyse des besoins + travail d'ergonomie/IHM), sans bloquer l'un par l'autre. La conception globale ne démarre qu'une fois les deux branches (faisabilité technique + besoins/IHM) suffisamment avancées.</p> <h3 class='fiche-h1'>Exercice 3 — Système anti-blocage de frein (ABS)</h3> <table class='fiche-table'><thead><tr><th>Critère</th><th>Analyse</th></tr></thead><tbody> <tr><td>Problème compris ?</td><td>Oui — fonction ABS bien définie et connue du secteur automobile</td></tr> <tr><td>Technologies maîtrisées ?</td><td>Oui — développé par un équipementier spécialisé en électronique embarquée</td></tr> <tr><td>Longue durée de vie / criticité ?</td><td>Système utilisé pendant de nombreuses années sur plusieurs véhicules, contraintes de temps de réponse très fortes → système critique pour la sécurité</td></tr> </tbody></table> <p class='fiche-p'><strong>Modèle recommandé : Cycle en V.</strong> C'est exactement le profil visé par le cours : système critique (sécurité des personnes), besoins stables et bien compris, technologie parfaitement maîtrisée par un spécialiste. Le cycle en V apporte la rigueur documentaire et la traçabilité des tests indispensables pour ce type de système embarqué critique (comparable aux exigences de normes comme EN 50128 côté ferroviaire).</p> <h3 class='fiche-h1'>Exercice 4 — Système de gestion du trafic aérien</h3> <table class='fiche-table'><thead><tr><th>Critère</th><th>Analyse</th></tr></thead><tbody> <tr><td>Problème compris ?</td><td>Oui globalement — la société a déjà développé des extensions du système existant</td></tr> <tr><td>Technologies maîtrisées ?</td><td>En grande partie, mais la diversité des équipements à interfacer (radars, transpondeurs...) reste un point de vigilance</td></tr> <tr><td>Longue durée de vie ?</td><td>Oui, au moins 20 ans → forte exigence de documentation</td></tr> <tr><td>Client disponible ?</td><td>Oui, très disponible : le MOA suit le projet à temps plein</td></tr> <tr><td>Taille</td><td><strong>Très grande taille</strong>, explicitement citée comme la principale difficulté</td></tr> </tbody></table> <p class='fiche-p'><strong>Modèle recommandé : Cycle incrémental.</strong> Le cours est explicite sur ce point : « un logiciel de grande taille... peut souvent impliquer l'utilisation d'incréments ». Découper le système en sous-ensembles fonctionnels (par exemple : traitement radar, gestion des conflits de trajectoires, IHM des contrôleurs, interfaçage transpondeurs) permet de livrer progressivement, de limiter le risque global du projet, et de s'appuyer sur un MOA disponible à temps plein pour valider chaque incrément avec les futurs utilisateurs (contrôleurs aériens).</p> <h3 class='fiche-h1'>Exercice 5 — Système de réalité virtuelle pour la maintenance de logiciel</h3> <table class='fiche-table'><thead><tr><th>Critère</th><th>Analyse</th></tr></thead><tbody> <tr><td>Problème compris ?</td><td>Non — l'IHM elle-même reste à imaginer</td></tr> <tr><td>Technologies maîtrisées ?</td><td>Non — les équipements de réalité virtuelle sont à découvrir</td></tr> <tr><td>Longue durée de vie ?</td><td>Oui, intention de travailler sur cette thématique pendant 10 ans, mais dans un cadre de recherche exploratoire (moins de contrainte de documentation \"industrielle\")</td></tr> <tr><td>Client disponible ?</td><td>Équipe de recherche universitaire elle-même porteuse du projet</td></tr> </tbody></table> <p class='fiche-p'><strong>Modèle recommandé : Cycle en spirale (ou prototypage).</strong> Deux risques forts et distincts doivent être levés progressivement : le risque technologique (maîtriser les équipements RV) et le risque fonctionnel/ergonomique (imaginer l'IHM). Un cycle en spirale permet de consacrer un premier tour à la prise en main technique des équipements RV, un second tour à des maquettes d'IHM en RV avec retours utilisateurs, un troisième tour à un prototype fonctionnel de maintenance, puis d'enrichir progressivement les fonctionnalités au fil des tours suivants.</p> <h3 class='fiche-h1'>Exercice 6 — Jeu en ligne publicitaire</h3> <table class='fiche-table'><thead><tr><th>Critère</th><th>Analyse</th></tr></thead><tbody> <tr><td>Problème compris ?</td><td>Besoin peu précis, liberté d'interprétation laissée au fournisseur</td></tr> <tr><td>Technologies maîtrisées ?</td><td>Oui — la société de services maîtrise les technologies du projet</td></tr> <tr><td>Longue durée de vie ?</td><td>Non — le jeu ne sera pas maintenu, pas de besoin de documentation long terme</td></tr> <tr><td>Client disponible / contraintes</td><td>Délai de livraison strict (campagne publicitaire déjà réservée), mais le client laisse une liberté d'interprétation sur le contenu</td></tr> <tr><td>Taille</td><td>Projet a priori de petite taille (jeu pour une campagne de pub)</td></tr> </tbody></table> <p class='fiche-p'><strong>Modèle recommandé : méthode agile (Scrum / Kanban), avec une nuance à discuter.</strong> Techniquement, la technologie maîtrisée plaiderait pour un cycle en V classique. Mais l'absence de besoin de documentation (le jeu n'est pas maintenu), le flou du besoin fonctionnel (liberté d'interprétation) et la petite taille du projet sont trois signaux typiques de l'agile. Le point de vigilance est le <strong>délai fixe</strong> : le cours signale que les contrats au forfait sont difficiles à concilier avec l'agile. La façon de lever cette tension est de garder le délai fixe mais de laisser le <strong>périmètre fonctionnel</strong> variable (ce que permet justement la liberté d'interprétation laissée par le client) : on priorise les fonctionnalités qui font \"le buzz\" et on ajuste le contenu du jeu sprint après sprint pour tenir la date de la campagne, quitte à sacrifier des fonctionnalités secondaires plutôt que le délai.</p>"
   }
 };
 </script>
@@ -1153,13 +1163,24 @@ function renderRevisions(page){
       </select>
       <button class="add-btn revisions" onclick="addRevision()">Ajouter</button>
     </div>
+    <div class="search-row"><input type="text" id="rv-search" placeholder="Rechercher une échéance par matière/chapitre…" oninput="renderRevisionsList()" /></div>
     <div class="list" id="list-revisions"></div>
   `;
   renderRevWeekPlan();
+  renderRevisionsList();
+}
+
+function renderRevisionsList(){
   const list = document.getElementById("list-revisions");
+  const searchEl = document.getElementById("rv-search");
+  const q = searchEl ? searchEl.value.trim().toLowerCase() : "";
   const order = {haute:0, moyenne:1, basse:2};
-  const sorted = [...DATA.revisions].sort((a,b)=> (order[a.priorite]-order[b.priorite]) || (a.echeance||"").localeCompare(b.echeance||""));
-  if(sorted.length===0){ list.innerHTML = '<div class="empty">Aucune révision en attente.</div>'; return; }
+  let sorted = [...DATA.revisions].sort((a,b)=> (order[a.priorite]-order[b.priorite]) || (a.echeance||"").localeCompare(b.echeance||""));
+  if(q) sorted = sorted.filter(i => (i.matiere||"").toLowerCase().includes(q));
+  if(sorted.length===0){
+    list.innerHTML = q ? `<div class="search-empty">Aucune échéance ne correspond à « ${escapeHtml(q)} ».</div>` : '<div class="empty">Aucune révision en attente.</div>';
+    return;
+  }
   list.innerHTML = sorted.map(i=>{
     const meta = i.echeance? `à rendre le ${i.echeance}` : "";
     return itemHtml(i,"revisions", meta, i.matiere, `<span class="prio ${i.priorite}">${i.priorite}</span>`);
@@ -1175,7 +1196,7 @@ const FICHE_BY_MATIERE = {
   "Ingénierie des Interfaces Humain-Machine (IHM)": ["ihm-chap1", "ihm-chap2", "ihm-chap4", "ihm-chap5", "ihm-chap6", "ihm-chap7"],
   "Cloud computing": ["cloud-intro", "cloud-git", "cloud-virt", "cloud-cicd"],
   "Patrons et composants": ["pc-intro", "pc-uml", "pc-java", "pc-test", "pc-sonar", "pc-dp-intro", "pc-dp-creation", "pc-dp-structurel", "pc-dp-comportement", "pc-antipattern", "pc-reactivite", "pc-spring", "pc-jpa", "pc-kotlin"],
-  "GL (Génie Logiciel)": [],
+  "GL (Génie Logiciel)": ["gl-cycles-de-vie"],
   "Analyse fontionnelle pour la modélisation de processus": ["afmp-merise"],
   "Contrôle de gestion": ["cg-presentation", "cg-intro", "cg-decision", "cg-centres-analyse", "cg-stocks", "cg-modeles-eco", "cg-abc", "cg-seuil-rentabilite"]
 };
@@ -1271,11 +1292,22 @@ function renderAlternance(page){
       <input type="date" id="a-date" />
       <button class="add-btn alternance" onclick="addAlternance()">Ajouter</button>
     </div>
+    <div class="search-row"><input type="text" id="alt-search" placeholder="Rechercher par type ou détail…" oninput="renderAlternanceList()" /></div>
     <div class="list" id="list-alternance"></div>
   `;
+  renderAlternanceList();
+}
+
+function renderAlternanceList(){
   const list = document.getElementById("list-alternance");
-  const sorted = [...DATA.alternance].sort((a,b)=> (a.date||"").localeCompare(b.date||""));
-  if(sorted.length===0){ list.innerHTML = '<div class="empty">Rien à afficher — ajoute ton rythme ou tes tâches.</div>'; return; }
+  const searchEl = document.getElementById("alt-search");
+  const q = searchEl ? searchEl.value.trim().toLowerCase() : "";
+  let sorted = [...DATA.alternance].sort((a,b)=> (a.date||"").localeCompare(b.date||""));
+  if(q) sorted = sorted.filter(i => (i.type||"").toLowerCase().includes(q) || (i.titre||"").toLowerCase().includes(q));
+  if(sorted.length===0){
+    list.innerHTML = q ? `<div class="search-empty">Rien ne correspond à « ${escapeHtml(q)} ».</div>` : '<div class="empty">Rien à afficher — ajoute ton rythme ou tes tâches.</div>';
+    return;
+  }
   const mondayStr = toLocalISO(mondayOf(new Date()));
   const idxCurrent = sorted.findIndex(i=>i.date===mondayStr);
   const ordered = idxCurrent>0 ? [sorted[idxCurrent], ...sorted.filter((_,i)=>i!==idxCurrent)] : sorted;
@@ -1344,12 +1376,23 @@ function renderSport(page){
       <input type="text" id="s-activite" placeholder="Activité (ex: jambes, cardio...)" />
       <button class="add-btn sport" onclick="addSport()">Ajouter</button>
     </div>
+    <div class="search-row"><input type="text" id="sp-search" placeholder="Rechercher un jour ou une activité…" oninput="renderSportList()" /></div>
     <div class="list" id="list-sport"></div>
     <p class="item-meta" style="margin:16px 4px 0;">Repos 60-90 s entre séries d'isolation, 90-120 s entre séries polyarticulaires (squat, soulevé de terre, développé). Augmente la charge dès que tu atteins le haut de la fourchette de répétitions avec une bonne forme. Pour progresser en prise de muscle : ~1,6-2 g de protéines/kg/jour et un bon sommeil comptent autant que les séances.</p>
   `;
+  renderSportList();
+}
+
+function renderSportList(){
   const list = document.getElementById("list-sport");
-  const sorted = [...DATA.sport].sort((a,b)=> JOURS.indexOf(a.jour)-JOURS.indexOf(b.jour) || (a.heure||"").localeCompare(b.heure||""));
-  if(sorted.length===0){ list.innerHTML = '<div class="empty">Aucune séance programmée.</div>'; return; }
+  const searchEl = document.getElementById("sp-search");
+  const q = searchEl ? searchEl.value.trim().toLowerCase() : "";
+  let sorted = [...DATA.sport].sort((a,b)=> JOURS.indexOf(a.jour)-JOURS.indexOf(b.jour) || (a.heure||"").localeCompare(b.heure||""));
+  if(q) sorted = sorted.filter(i => (i.jour||"").toLowerCase().includes(q) || (i.activite||"").toLowerCase().includes(q));
+  if(sorted.length===0){
+    list.innerHTML = q ? `<div class="search-empty">Rien ne correspond à « ${escapeHtml(q)} ».</div>` : '<div class="empty">Aucune séance programmée.</div>';
+    return;
+  }
   const todayAbbrev = JOURS[(new Date().getDay()+6)%7];
   const idxToday = sorted.findIndex(i=>i.jour===todayAbbrev);
   const ordered = idxToday>0 ? [sorted[idxToday], ...sorted.filter((_,i)=>i!==idxToday)] : sorted;
@@ -1406,15 +1449,25 @@ function renderFiches(page){
     <h1 style="color:#6B4E9E">Fiches de cours</h1>
     <p class="subtitle">${filtered ? `Chapitres disponibles pour ${escapeHtml(fichesFilterMatiere)}` : "Résumés, fiches de révision et exercices corrigés, tirés de tes propres cours"}</p>
     ${filtered ? `<button class="today-btn" style="border:1px solid var(--line); background:var(--paper); border-radius:8px; padding:6px 12px; cursor:pointer; font-size:13px; margin-bottom:14px;" onclick="clearFichesFilter()">← Toutes les fiches</button>` : ""}
+    <div class="search-row"><input type="text" id="fc-search" placeholder="Rechercher une fiche par matière ou chapitre…" oninput="renderFichesListFiltered()" /></div>
     <div id="fiches-list"></div>
   `;
+  renderFichesListFiltered();
+}
+
+function renderFichesListFiltered(){
   const list = document.getElementById("fiches-list");
+  const searchEl = document.getElementById("fc-search");
+  const q = searchEl ? searchEl.value.trim().toLowerCase() : "";
   let keys = Object.keys(FICHES);
-  if(filtered){
+  if(fichesFilterMatiere){
     keys = keys.filter(k => FICHES[k].matiere === fichesFilterMatiere);
   }
+  if(q){
+    keys = keys.filter(k => FICHES[k].matiere.toLowerCase().includes(q) || FICHES[k].chapitre.toLowerCase().includes(q));
+  }
   if(keys.length===0){
-    list.innerHTML = '<div class="empty">Aucune fiche disponible pour le moment.</div>';
+    list.innerHTML = q ? `<div class="search-empty">Aucune fiche ne correspond à « ${escapeHtml(q)} ».</div>` : '<div class="empty">Aucune fiche disponible pour le moment.</div>';
     return;
   }
   list.innerHTML = keys.map(k=>{
@@ -1469,8 +1522,55 @@ function renderFicheDetail(page, key){
     <div class="fiche-tabs">
       ${tabs.map(t=>`<button class="fiche-tab-btn ${currentFicheTab===t.id?"active":""}" onclick="switchFicheTab('${t.id}')">${t.label}</button>`).join("")}
     </div>
-    <div class="fiche-content">${f[currentFicheTab]}</div>
+    <div class="search-row" style="display:flex; align-items:center; gap:10px;">
+      <input type="text" id="fd-search" placeholder="Rechercher une notion ou une partie dans cette fiche…" oninput="filterFicheDetailContent()" style="flex:1;"/>
+      <span id="fd-search-count" style="font-size:12px; color:var(--muted); white-space:nowrap;"></span>
+    </div>
+    <div class="fiche-content" id="fiche-content-body">${f[currentFicheTab]}</div>
   `;
+}
+
+// Recherche "dans la page" : surligne les passages correspondants au sein de la fiche actuellement
+// ouverte (résumé / fiche de révision / corrigés), sans jamais altérer les diagrammes SVG.
+function filterFicheDetailContent(){
+  const container = document.getElementById("fiche-content-body");
+  const countEl = document.getElementById("fd-search-count");
+  const searchEl = document.getElementById("fd-search");
+  const q = searchEl ? searchEl.value.trim() : "";
+  const original = FICHES[currentFicheId][currentFicheTab];
+  container.innerHTML = original;
+  if(!q){ if(countEl) countEl.textContent = ""; return; }
+
+  const tokens = rqTokenize(q).filter(t=>t.length>1);
+  const qNorm = rqNormalize(q);
+  let count = 0;
+
+  function isMatch(text){
+    const norm = rqNormalize(text);
+    if(qNorm.length>1 && norm.includes(qNorm)) return true;
+    return tokens.some(t => norm.includes(t));
+  }
+
+  function walk(node){
+    if(node.nodeType === 3){ // #text
+      if(node.nodeValue.trim().length===0) return;
+      if(isMatch(node.nodeValue)){
+        const span = document.createElement("span");
+        span.innerHTML = rqHighlight(node.nodeValue, tokens.length? tokens : [q]);
+        count += span.querySelectorAll("mark").length;
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if(node.nodeType === 1){
+      const tag = (node.tagName||"").toLowerCase();
+      if(tag === "svg" || tag === "script" || tag === "style") return; // ne jamais toucher aux diagrammes
+      Array.from(node.childNodes).forEach(walk);
+    }
+  }
+  walk(container);
+
+  if(countEl) countEl.textContent = count>0 ? `${count} passage(s) trouvé(s)` : "Aucune correspondance dans cette fiche";
+  const firstMark = container.querySelector("mark");
+  if(firstMark && firstMark.scrollIntoView) firstMark.scrollIntoView({behavior:"smooth", block:"center"});
 }
 
 
@@ -1493,47 +1593,72 @@ function renderProgression(page){
       <div class="pg-pct">${globalPct}%</div>
       <div class="pg-label">${totalDone} / ${totalFiches} fiches révisées au total</div>
     </div>
-    <div class="section-label">Par matière</div>`;
+    <div class="search-row"><input type="text" id="pg-search" placeholder="Rechercher une matière ou un chapitre…" oninput="renderProgressionBody()" /></div>
+    <div id="progression-body"></div>`;
 
-  perMatiere.forEach(pm=>{
-    const pct = pm.total>0 ? Math.round((pm.doneCount/pm.total)*100) : 0;
-    html += `<div class="progress-row">
-      <div class="pr-label">${escapeHtml(pm.matiere)}</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:${pct}%;"></div></div>
-      <div class="pr-pct">${pm.total>0? pct+"%" : "—"}</div>
-    </div>`;
-    if(pm.total>0){
-      html += `<div class="list" style="margin:-6px 0 18px;">`;
-      pm.keys.forEach(k=>{
-        const f = FICHES[k];
-        const done = isFicheDone(k);
-        html += `<div class="agenda-item clickable" onclick="openFicheDirect('${k}')">
-          <span class="tag" style="${done?'background:#DEEAE1; color:#3D6B4F;':'background:#EFEAE0; color:#8A8578;'}">${done? '✓ Révisé' : 'À faire'}</span>
-          <span class="txt">${escapeHtml(f.chapitre)}</span>
-          <span class="meta">${done? escapeHtml(FICHE_PROGRESS[k].date) : ""}</span>
-        </div>`;
-      });
-      html += `</div>`;
-    } else {
-      html += `<div class="empty" style="margin:-6px 0 18px;">Aucune fiche pour l'instant — envoie les cours de cette matière quand tu veux.</div>`;
-    }
-  });
+  page.innerHTML = html;
+  window._perMatiereCache = perMatiere;
+  renderProgressionBody();
+}
+
+function renderProgressionBody(){
+  const perMatiere = window._perMatiereCache || [];
+  const searchEl = document.getElementById("pg-search");
+  const q = searchEl ? searchEl.value.trim().toLowerCase() : "";
+  let html = `<div class="section-label">Par matière</div>`;
+
+  const perMatiereFiltered = q
+    ? perMatiere.map(pm=>({...pm, keys: pm.keys.filter(k => pm.matiere.toLowerCase().includes(q) || (FICHES[k] && FICHES[k].chapitre.toLowerCase().includes(q)))}))
+        .filter(pm => pm.matiere.toLowerCase().includes(q) || pm.keys.length>0)
+    : perMatiere;
+
+  if(q && perMatiereFiltered.length===0){
+    html += `<div class="search-empty">Aucune matière ou fiche ne correspond à « ${escapeHtml(q)} ».</div>`;
+  } else {
+    perMatiereFiltered.forEach(pm=>{
+      const pct = pm.total>0 ? Math.round((pm.doneCount/pm.total)*100) : 0;
+      const displayKeys = q && !pm.matiere.toLowerCase().includes(q) ? pm.keys : (q ? pm.keys : pm.keys);
+      html += `<div class="progress-row">
+        <div class="pr-label">${escapeHtml(pm.matiere)}</div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" style="width:${pct}%;"></div></div>
+        <div class="pr-pct">${pm.total>0? pct+"%" : "—"}</div>
+      </div>`;
+      const keysToShow = q ? (pm.matiere.toLowerCase().includes(q) ? pm.keys : displayKeys) : pm.keys;
+      if(keysToShow.length>0){
+        html += `<div class="list" style="margin:-6px 0 18px;">`;
+        keysToShow.forEach(k=>{
+          const f = FICHES[k];
+          const done = isFicheDone(k);
+          html += `<div class="agenda-item clickable" onclick="openFicheDirect('${k}')">
+            <span class="tag" style="${done?'background:#DEEAE1; color:#3D6B4F;':'background:#EFEAE0; color:#8A8578;'}">${done? '✓ Révisé' : 'À faire'}</span>
+            <span class="txt">${escapeHtml(f.chapitre)}</span>
+            <span class="meta">${done? escapeHtml(FICHE_PROGRESS[k].date) : ""}</span>
+          </div>`;
+        });
+        html += `</div>`;
+      } else if(!q && pm.total===0) {
+        html += `<div class="empty" style="margin:-6px 0 18px;">Aucune fiche pour l'instant — envoie les cours de cette matière quand tu veux.</div>`;
+      }
+    });
+  }
 
   // Historique par jour
   const byDate = {};
   Object.keys(FICHE_PROGRESS).forEach(k=>{
     const entry = FICHE_PROGRESS[k];
     if(!entry || !entry.done) return;
+    const f = FICHES[k];
+    if(!f) return;
+    if(q && !(f.matiere.toLowerCase().includes(q) || f.chapitre.toLowerCase().includes(q))) return;
     const d = entry.date || "?";
     if(!byDate[d]) byDate[d] = [];
-    const f = FICHES[k];
-    if(f) byDate[d].push(`${f.matiere} — ${f.chapitre}`);
+    byDate[d].push(`${f.matiere} — ${f.chapitre}`);
   });
   const dates = Object.keys(byDate).sort().reverse();
 
   html += `<div class="section-label">Historique par jour</div>`;
   if(dates.length===0){
-    html += `<div class="empty">Aucune fiche marquée comme révisée pour le moment.</div>`;
+    html += `<div class="empty">${q? "Aucune fiche révisée ne correspond à cette recherche." : "Aucune fiche marquée comme révisée pour le moment."}</div>`;
   } else {
     dates.forEach(d=>{
       const dateObj = new Date(d+"T12:00:00");
@@ -1548,7 +1673,7 @@ function renderProgression(page){
     });
   }
 
-  page.innerHTML = html;
+  document.getElementById("progression-body").innerHTML = html;
 }
 function openFicheDirect(key){
   currentFicheId = key;
@@ -1616,7 +1741,9 @@ const FILE_TO_FICHE = {
   "COURS N°5 les stocks révisions.pdf": "cg-stocks",
   "COURS N°6 spécificités entreprise numérique.pdf": "cg-modeles-eco",
   "COURS N°7 méthode ABC.pdf": "cg-abc",
-  "COURS N°8 SEUIL DE RENTABILITE.pdf": "cg-seuil-rentabilite"
+  "COURS N°8 SEUIL DE RENTABILITE.pdf": "cg-seuil-rentabilite",
+  "resume_cycles_de_vie.pdf": "gl-cycles-de-vie",
+  "TDcyclesDeVie2020.pdf": "gl-cycles-de-vie"
 };
 
 function openSourceFile(filename){
@@ -1633,14 +1760,48 @@ function openSourceFile(filename){
 }
 
 function renderSources(page){
-  const matieres = Object.keys(COURS_SOURCE);
-  let html = `<h1 style="color:#8A8578">Fichiers de cours</h1>
+  page.innerHTML = `<h1 style="color:#8A8578">Fichiers de cours</h1>
     <p class="subtitle">Catalogue de tous les PDF de cours présents dans ton ZIP, tels quels</p>
-    <p class="fiche-note" style="margin-bottom:22px;">Les fichiers eux-mêmes sont trop volumineux pour être intégrés dans cette page — ils te sont transmis en pièces jointes séparées dans la conversation. Clique sur un fichier : s'il a déjà été résumé, tu arrives directement sur sa fiche ; sinon, tu es prévenu qu'il reste à traiter.</p>`;
+    <p class="fiche-note" style="margin-bottom:22px;">Les fichiers eux-mêmes sont trop volumineux pour être intégrés dans cette page — ils te sont transmis en pièces jointes séparées dans la conversation. Clique sur un fichier : s'il a déjà été résumé, tu arrives directement sur sa fiche ; sinon, tu es prévenu qu'il reste à traiter.</p>
+    <div class="search-row"><input type="text" id="src-search" placeholder="Rechercher un fichier, une matière, un chapitre, ou un mot-clé DANS le contenu du cours…" oninput="renderSourcesList()" /></div>
+    <div id="sources-content"></div>
+  `;
+  renderSourcesList();
+}
+
+// Cherche le premier passage du contenu d'une fiche qui contient la requête (recherche plein texte,
+// pas seulement sur le nom de fichier/matière/chapitre) — permet de retrouver un PDF à partir d'une
+// notion qu'il contient, même si le mot n'apparaît ni dans son nom ni dans son titre de chapitre.
+function rqFicheContentMatch(ficheKey, qNorm){
+  if(!ficheKey || !qNorm) return null;
+  const chunks = rqBuildIndex().filter(c=>c.ficheKey===ficheKey);
+  for(const c of chunks){
+    if(rqNormalize(c.text).includes(qNorm)) return c.text;
+  }
+  return null;
+}
+
+function renderSourcesList(){
+  const content = document.getElementById("sources-content");
+  const searchEl = document.getElementById("src-search");
+  const qRaw = searchEl ? searchEl.value.trim() : "";
+  const q = qRaw.toLowerCase();
+  const qNorm = rqNormalize(qRaw);
+  const matieres = Object.keys(COURS_SOURCE);
+  let html = "";
+  let totalMatches = 0;
 
   matieres.forEach(m=>{
-    const files = COURS_SOURCE[m];
     const matiereFull = MATIERE_LABEL[m] || m;
+    const files = COURS_SOURCE[m].filter(f=>{
+      if(!q) return true;
+      const ficheKey = FILE_TO_FICHE[f];
+      const chapitre = ficheKey && FICHES[ficheKey] ? FICHES[ficheKey].chapitre : "";
+      const metaMatch = f.toLowerCase().includes(q) || m.toLowerCase().includes(q) || matiereFull.toLowerCase().includes(q) || chapitre.toLowerCase().includes(q);
+      return metaMatch || !!rqFicheContentMatch(ficheKey, qNorm);
+    });
+    if(files.length===0) return;
+    totalMatches += files.length;
     const nbFiches = fichesForMatiere(matiereFull).length;
     html += `<div class="section-label">${escapeHtml(m)} — ${escapeHtml(matiereFull)}
       ${nbFiches>0 ? `<span style="color:#6B4E9E; text-transform:none; font-weight:600; cursor:pointer;" onclick="fichesFilterMatiere='${matiereFull.replace(/'/g,"\\'")}'; currentFicheId=null; switchTab('fiches')"> · ${nbFiches} fiche(s) disponible(s) →</span>` : `<span style="color:var(--muted); text-transform:none; font-weight:400;"> · aucune fiche pour l'instant</span>`}
@@ -1648,14 +1809,28 @@ function renderSources(page){
     html += `<div class="list" style="margin-bottom:20px;">`;
     files.forEach(f=>{
       const hasFiche = !!FILE_TO_FICHE[f];
+      const ficheKey = FILE_TO_FICHE[f];
       const tagStyle = hasFiche ? "background:#E4DAF2; color:#6B4E9E;" : "background:#EFEAE0; color:#8A8578;";
       const tagLabel = hasFiche ? "📄 PDF · résumé dispo" : "PDF";
-      html += `<div class="agenda-item clickable" onclick="openSourceFile('${f.replace(/'/g,"\\'")}')"><span class="tag" style="${tagStyle}">${tagLabel}</span><span class="txt">${escapeHtml(f)}</span><span class="meta"></span></div>`;
+      const chapitre = hasFiche && FICHES[ficheKey] ? FICHES[ficheKey].chapitre : "";
+      html += `<div class="agenda-item clickable" onclick="openSourceFile('${f.replace(/'/g,"\\'")}')"><span class="tag" style="${tagStyle}">${tagLabel}</span><span class="txt">${escapeHtml(f)}</span><span class="meta">${escapeHtml(chapitre)}</span></div>`;
+      if(q){
+        const metaMatch = f.toLowerCase().includes(q) || chapitre.toLowerCase().includes(q);
+        const contentMatch = !metaMatch ? rqFicheContentMatch(ficheKey, qNorm) : null;
+        if(contentMatch){
+          const excerpt = contentMatch.length>150 ? contentMatch.slice(0,150)+"…" : contentMatch;
+          html += `<div style="font-size:12px;color:var(--muted);padding:2px 0 10px 14px;">🔎 trouvé dans le contenu : ${rqHighlight(excerpt, rqTokenize(qRaw))}</div>`;
+        }
+      }
     });
     html += `</div>`;
   });
 
-  page.innerHTML = html;
+  if(q && totalMatches===0){
+    html = `<div class="search-empty">Aucun fichier ne correspond à « ${escapeHtml(qRaw)} » (recherche sur le nom, la matière, le chapitre et le contenu des fiches).</div>`;
+  }
+
+  content.innerHTML = html;
 }
 
 
@@ -1815,9 +1990,19 @@ function rqSplitChunks(html){
   div.innerHTML = html;
   const chunks = [];
   const blockSelector = "h3, h4, p, li, td, .fiche-note, .fbx-title, .ffb-line, .fpl-title, .fpl-sub, .fiche-flow-box";
+  const headingLike = new Set(["H3","H4"]);
   div.querySelectorAll(blockSelector).forEach(el=>{
-    const text = (el.textContent||"").trim();
-    if(text.length > 8) chunks.push(text);
+    let text = (el.textContent||"").trim();
+    if(text.length <= 8) return;
+    // Un titre seul (h3/h4/.fbx-title) n'est pas une réponse utile : on l'enrichit avec le
+    // contenu qui le suit immédiatement (ex: la vraie liste des "4 principes"), pour que le
+    // passage retenu contienne l'information, pas seulement l'intitulé de la section.
+    const isTitleLike = headingLike.has(el.tagName) || (el.className && el.className.indexOf && el.className.indexOf("fbx-title")>=0);
+    if(isTitleLike && el.nextElementSibling){
+      const sibText = (el.nextElementSibling.textContent||"").trim();
+      if(sibText) text = text + " : " + sibText.slice(0,400);
+    }
+    chunks.push(text);
   });
   if(chunks.length === 0){
     const text = (div.textContent||"").trim();
@@ -1841,20 +2026,40 @@ function rqBuildIndex(){
       });
     });
   });
+  // calcule l'IDF (importance) de chaque terme sur l'ensemble du corpus indexé,
+  // pour que les termes rares et spécifiques pèsent plus que les mots très fréquents (ex: "coût")
+  const df = {};
+  RQ_INDEX.forEach(chunk=>{
+    new Set(chunk.tokens).forEach(t=> df[t] = (df[t]||0)+1);
+  });
+  const N = RQ_INDEX.length;
+  RQ_IDF = {};
+  Object.keys(df).forEach(t=>{ RQ_IDF[t] = Math.log((N+1)/(df[t]+1)) + 1; });
   return RQ_INDEX;
 }
 
-function rqScoreChunk(queryTokens, chunk){
+function rqIdf(token){ return (RQ_IDF && RQ_IDF[token]) || 1; }
+
+function rqScoreChunk(queryTokens, queryNorm, chunk){
   if(chunk.tokens.length===0) return 0;
   let score = 0;
   const freq = {};
   chunk.tokens.forEach(t=> freq[t] = (freq[t]||0)+1);
+  // TF-IDF : compte pondéré par la rareté du terme dans l'ensemble du corpus
   queryTokens.forEach(qt=>{
-    if(freq[qt]) score += 1 + Math.log(1+freq[qt]);
+    if(freq[qt]) score += (1 + Math.log(1+freq[qt])) * rqIdf(qt);
   });
-  // bonus si le terme apparaît dans le nom du chapitre ou de la matière
+  // bonus si le terme apparaît dans le nom du chapitre ou de la matière (contexte très fiable)
   const ctxTokens = rqTokenize(chunk.matiere + " " + chunk.chapitre);
-  queryTokens.forEach(qt=>{ if(ctxTokens.includes(qt)) score += 1.5; });
+  queryTokens.forEach(qt=>{ if(ctxTokens.includes(qt)) score += 2 * rqIdf(qt); });
+  // bonus fort si la phrase de la question apparaît (quasi) telle quelle dans le passage
+  const chunkNorm = rqNormalize(chunk.text);
+  if(queryNorm.length > 4 && chunkNorm.includes(queryNorm)) score += 8;
+  // bonus si des bigrammes consécutifs de la question se retrouvent dans le passage
+  for(let i=0;i<queryTokens.length-1;i++){
+    const bigram = queryTokens[i]+" "+queryTokens[i+1];
+    if(chunkNorm.includes(bigram)) score += 2;
+  }
   return score;
 }
 
@@ -1872,18 +2077,19 @@ function rqHighlight(text, queryTokens){
 function rqSearch(query){
   const queryTokens = rqTokenize(query);
   if(queryTokens.length===0) return [];
+  const queryNorm = rqNormalize(query).trim();
   const index = rqBuildIndex();
-  const scored = index.map(chunk=>({chunk, score: rqScoreChunk(queryTokens, chunk)}))
+  const scored = index.map(chunk=>({chunk, score: rqScoreChunk(queryTokens, queryNorm, chunk)}))
     .filter(x=>x.score>0)
     .sort((a,b)=>b.score-a.score);
 
-  // regroupe par fiche, garde les 2 meilleurs extraits par fiche
+  // regroupe par fiche, garde les 3 meilleurs extraits par fiche
   const byFiche = {};
   scored.forEach(({chunk,score})=>{
     if(!byFiche[chunk.ficheKey]) byFiche[chunk.ficheKey] = {ficheKey:chunk.ficheKey, matiere:chunk.matiere, chapitre:chunk.chapitre, bestScore:0, snippets:[]};
     const entry = byFiche[chunk.ficheKey];
     entry.bestScore = Math.max(entry.bestScore, score);
-    if(entry.snippets.length < 2) entry.snippets.push({text:chunk.text, score, fieldLabel:chunk.fieldLabel});
+    if(entry.snippets.length < 3) entry.snippets.push({text:chunk.text, score, fieldLabel:chunk.fieldLabel});
   });
 
   return Object.values(byFiche).sort((a,b)=>b.bestScore-a.bestScore).slice(0,5).map(entry=>{
@@ -1891,6 +2097,24 @@ function rqSearch(query){
     entry.files = rqBuildFileMap()[entry.ficheKey] || [];
     return entry;
   });
+}
+
+// Sélectionne LE contexte le plus pertinent pour la question : une seule fiche/source,
+// pas un mélange de plusieurs — c'est ça, la "contextualisation de la requête".
+function rqPickBestContext(query){
+  const results = rqSearch(query);
+  if(!results.length) return null;
+  return results[0];
+}
+
+// Construit une réponse locale (extractive) strictement à partir du contexte choisi —
+// aucun appel réseau, donc toujours disponible et sans aucun risque d'invention.
+function rqBuildLocalAnswer(query, context){
+  const candidates = context.snippets.slice().sort((a,b)=> b.score-a.score);
+  const good = candidates.filter(s=>s.text.length>=25);
+  const chosen = (good.length? good : candidates).slice(0,3);
+  if(chosen.length===0) return null;
+  return chosen.map(s=>rqHighlight(s.text, context.queryTokens)).join(" ");
 }
 
 function rqApiKey(){ return localStorage.getItem("rq_api_key") || ""; }
@@ -1904,99 +2128,115 @@ function rqToggleKeyBox(){
   box.style.display = box.style.display==="none" ? "block" : "none";
 }
 
-async function rqRunSynthesis(query, results){
-  const key = rqApiKey();
-  const synthEl = document.getElementById("rq-synth");
-  if(!key){ synthEl.style.display = "none"; return; }
-  synthEl.style.display = "block";
-  synthEl.innerHTML = `<div class="ss-title">🤖 Synthèse par Claude</div><div class="ss-loading">Rédaction de la synthèse…</div>`;
-
-  const context = results.map(r=>
-    `Source (${r.files.join(", ") || r.ficheKey}) — ${r.matiere} — ${r.chapitre} :\n` +
-    r.snippets.map(s=>"- "+s.text).join("\n")
-  ).join("\n\n");
-
-  try{
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json",
-        "x-api-key": key,
-        "anthropic-version":"2023-06-01",
-        "anthropic-dangerous-direct-browser-access":"true"
-      },
-      body: JSON.stringify({
-        model:"claude-sonnet-4-6",
-        max_tokens:600,
-        messages:[{role:"user", content:
-          `Tu es l'assistant de révision d'un étudiant en MIAGE. Réponds à sa question UNIQUEMENT à partir des extraits de cours ci-dessous (ne rien inventer, rester factuel et concis, en français). Si les extraits ne suffisent pas pour répondre complètement, dis-le.\n\nQuestion : ${query}\n\nExtraits de cours :\n${context}\n\nRéponds en 4-8 lignes maximum.`
-        }]
-      })
-    });
-    if(!response.ok) throw new Error("HTTP "+response.status);
-    const data = await response.json();
-    const text = (data.content||[]).map(b=>b.text||"").join("\n").trim();
-    synthEl.innerHTML = `<div class="ss-title">🤖 Synthèse par Claude</div><div class="ss-body">${escapeHtml(text).replace(/\n/g,"<br>")}</div>`;
-  }catch(e){
-    synthEl.innerHTML = `<div class="ss-title">🤖 Synthèse par Claude</div><div class="ss-body" style="color:var(--muted);font-style:italic;">Impossible de contacter l'API Anthropic (réseau ou clé invalide). Voici directement les extraits les plus pertinents trouvés dans tes fiches ⬇</div>`;
-  }
+// Construit le bloc HTML de LA réponse unique (locale ou Claude), toujours avec le chemin exact
+// du fichier source d'où elle a été puisée.
+function rqRenderAnswerBlock(title, bodyHtml, context){
+  const filesLine = context.files.length
+    ? context.files.map(f=>`<code>${escapeHtml(f)}</code>`).join(", ")
+    : "aucun PDF associé (fiche indépendante)";
+  return `<div class="ss-title">${title}</div>
+    <div class="ss-body">${bodyHtml}</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:10px;">📄 Chemin du fichier source : ${filesLine}</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:2px;">📂 ${escapeHtml(context.matiere)} — ${escapeHtml(context.chapitre)}</div>
+    <button class="sr-open" style="margin-top:10px;" onclick="openFicheDirect('${context.ficheKey}')">Voir la fiche complète →</button>`;
 }
 
-function runSearch(){
+// Interroge Claude en le contextualisant STRICTEMENT sur la source unique retrouvée
+// (pas de mélange d'autres fiches) pour obtenir la réponse la plus juste possible.
+async function rqFetchClaudeAnswer(query, context){
+  const key = rqApiKey();
+  const contextText = `Source unique (${context.files.join(", ") || context.ficheKey}) — ${context.matiere} — ${context.chapitre} :\n` +
+    context.snippets.map(s=>"- "+s.text).join("\n");
+
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json",
+      "x-api-key": key,
+      "anthropic-version":"2023-06-01",
+      "anthropic-dangerous-direct-browser-access":"true"
+    },
+    body: JSON.stringify({
+      model:"claude-sonnet-4-6",
+      max_tokens:500,
+      messages:[{role:"user", content:
+        `Tu es l'assistant de révision d'un étudiant en MIAGE. Voici le CONTEXTE exact (une seule source de cours) sur lequel te baser. Donne UNE SEULE réponse, la plus juste et la plus précise possible, strictement fondée sur ce contexte, sans rien inventer ni ajouter d'extérieur. Si ce contexte ne permet pas de répondre complètement à la question, dis-le clairement plutôt que de deviner. Cite les formules/chiffres exacts s'ils sont présents.\n\nQuestion : ${query}\n\nContexte (source unique) :\n${contextText}\n\nRéponds en 3-8 lignes, en français, de façon directe.`
+      }]
+    })
+  });
+  if(!response.ok) throw new Error("HTTP "+response.status);
+  const data = await response.json();
+  const text = (data.content||[]).map(b=>b.text||"").join("\n").trim();
+  if(!text) throw new Error("Réponse vide");
+  return text;
+}
+
+async function runSearch(){
   const input = document.getElementById("rq-input");
   const query = input ? input.value.trim() : "";
   const resultsEl = document.getElementById("recherche-results");
-  const synthEl = document.getElementById("rq-synth");
-  synthEl.style.display = "none";
+  const answerEl = document.getElementById("rq-answer");
+  answerEl.style.display = "none";
+  answerEl.innerHTML = "";
+
   if(!query){
     resultsEl.innerHTML = '<div class="search-empty">Pose une question sur un de tes cours (ex : « comment calculer le seuil de rentabilité ? », « différence MCD MLD », « répartition primaire secondaire »…).</div>';
     return;
   }
-  const results = rqSearch(query);
-  if(results.length===0){
-    resultsEl.innerHTML = `<div class="search-empty">Aucun passage pertinent trouvé dans les fiches actuelles pour « ${escapeHtml(query)} ». Essaie avec d'autres mots-clés, ou ce cours n'a peut-être pas encore de fiche.</div>`;
+
+  const context = rqPickBestContext(query);
+  if(!context){
+    resultsEl.innerHTML = `<div class="search-empty">Aucune information trouvée dans tes fiches actuelles pour « ${escapeHtml(query)} ». Essaie avec d'autres mots-clés, ou ce cours n'a peut-être pas encore de fiche.</div>`;
     return;
   }
-  resultsEl.innerHTML = results.map(r=>{
-    const snippetsHtml = r.snippets.map(s=>
-      `<div class="sr-snippet"><em>${escapeHtml(s.fieldLabel)}</em> — ${rqHighlight(s.text, r.queryTokens)}</div>`
-    ).join("");
-    const filesHtml = r.files.length
-      ? `<div class="sr-files">📄 Fichier${r.files.length>1?'s':''} source : ${r.files.map(f=>`<code>${escapeHtml(f)}</code>`).join(" ")}</div>`
-      : `<div class="sr-files">📄 Aucun fichier PDF source associé (fiche indépendante)</div>`;
-    return `<div class="search-result">
-      <div class="sr-title">${escapeHtml(r.matiere)} — ${escapeHtml(r.chapitre)}</div>
-      <div class="sr-sub">Pertinence : ${r.bestScore.toFixed(1)}</div>
-      ${snippetsHtml}
-      ${filesHtml}
-      <button class="sr-open" onclick="openFicheDirect('${r.ficheKey}')">Voir la fiche complète →</button>
-    </div>`;
-  }).join("");
+  resultsEl.innerHTML = "";
 
-  rqRunSynthesis(query, results);
+  // 1) Réponse locale immédiate, contextualisée sur cette seule source — toujours fiable.
+  const localBody = rqBuildLocalAnswer(query, context) || "Aucun passage suffisamment clair n'a été isolé, mais cette fiche est la plus proche du sujet de ta question.";
+  answerEl.style.display = "block";
+  answerEl.innerHTML = rqRenderAnswerBlock("📝 Réponse (d'après tes fiches)", localBody, context);
+
+  // 2) Si une clé API est configurée, tente de l'améliorer avec une réponse rédigée par Claude,
+  // contextualisée sur cette MÊME source unique — et la remplace en cas de succès.
+  const key = rqApiKey();
+  if(key){
+    const loadingNote = document.createElement("div");
+    loadingNote.className = "ss-loading";
+    loadingNote.style.marginTop = "8px";
+    loadingNote.textContent = "Amélioration de la réponse par Claude…";
+    answerEl.appendChild(loadingNote);
+    try{
+      const claudeText = await rqFetchClaudeAnswer(query, context);
+      answerEl.innerHTML = rqRenderAnswerBlock("🤖 Réponse (rédigée par Claude à partir de cette source)", escapeHtml(claudeText).replace(/\n/g,"<br>"), context);
+    }catch(e){
+      answerEl.innerHTML = rqRenderAnswerBlock("📝 Réponse (d'après tes fiches)", localBody, context) +
+        `<div style="font-size:12px;color:var(--muted);margin-top:8px;font-style:italic;">⚠️ Impossible de contacter l'API Claude (réseau ou clé invalide) — la réponse locale ci-dessus reste fiable.</div>`;
+    }
+  }
 }
 
 function renderRecherche(page){
   const savedKey = rqApiKey();
   page.innerHTML = `
     <h1 style="color:#9C5A3C">Recherche</h1>
-    <p class="subtitle">Pose une question : l'app cherche dans toutes tes fiches de cours (résumés, fiches de révision, corrigés) et te montre les passages les plus pertinents avec le fichier source exact.</p>
+    <p class="subtitle">Pose une question : l'app identifie le passage de cours le plus pertinent (une seule source), et t'en donne la réponse la plus juste possible, avec le chemin exact du fichier d'où elle est puisée.</p>
     <div class="search-bar">
       <input type="text" id="rq-input" placeholder="Ex : comment calculer le seuil de rentabilité ?" onkeydown="if(event.key==='Enter') runSearch()"/>
       <button onclick="runSearch()">🔍 Chercher</button>
     </div>
-    <span class="search-key-toggle" onclick="rqToggleKeyBox()">⚙️ Option : synthèse rédigée par Claude (clé API perso)</span>
+    <span class="search-key-toggle" onclick="rqToggleKeyBox()">⚙️ Option : réponse rédigée par Claude en plus (clé API perso)</span>
     <div class="search-key-box" id="rq-key-box" style="display:none;">
       <strong>Clé API Anthropic (optionnelle)</strong><br>
-      Si tu colles ta propre clé API Anthropic ici, la recherche te proposera en plus une synthèse rédigée par Claude à partir des passages retrouvés dans tes fiches. Sans clé, la recherche fonctionne quand même très bien (recherche locale, hors-ligne, sans rien envoyer nulle part).
+      Si tu colles ta propre clé API Anthropic ici, la réponse sera rédigée par Claude à partir du même passage de cours retrouvé. Sans clé, la recherche donne déjà une réponse fiable (locale, hors-ligne, sans rien envoyer nulle part).
       <input type="password" id="rq-api-key" placeholder="sk-ant-..." value="${escapeHtml(savedKey)}"/>
       <button onclick="rqSaveApiKey()">Enregistrer sur cet appareil</button>
       <div id="rq-key-status" style="margin-top:6px;color:var(--muted);"></div>
     </div>
-    <div class="search-synth" id="rq-synth" style="display:none;"></div>
+    <div class="search-synth" id="rq-answer" style="display:none;"></div>
     <div id="recherche-results"><div class="search-empty">Pose une question sur un de tes cours (ex : « comment calculer le seuil de rentabilité ? », « différence MCD MLD », « répartition primaire secondaire »…).</div></div>
   `;
 }
+
 
 loadAll();
 </script>
