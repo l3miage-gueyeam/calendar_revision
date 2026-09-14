@@ -42,6 +42,7 @@
   .tab[data-cat="sources"] .dot{ background:#8A8578; }
   .tab[data-cat="progression"] .dot{ background:#3D6B4F; }
   .tab[data-cat="recherche"] .dot{ background:#9C5A3C; }
+  .tab[data-cat="notes"] .dot{ background:#B5762F; }
   .tab.active{ background:var(--paper); transform:translateX(-8px); border-color:var(--line-strong); z-index:2; }
   .count{ margin-left:auto; font-size:12px; color:var(--muted); font-weight:500; }
   .page{ flex:1; background:var(--paper-2); border-left:1px solid var(--line-strong); padding:36px 40px 60px; min-height:100vh; }
@@ -264,6 +265,36 @@
   .search-result .sr-open:hover{ background:#9C5A3C; color:#fff; }
   .search-empty{ color:var(--muted); font-size:13.5px; padding:20px 0; }
 
+  /* ---------- Double-page : fiche + prise de notes ---------- */
+  .fiche-with-notes{ display:flex; gap:22px; align-items:flex-start; }
+  .fiche-with-notes .fiche-content{ flex:1 1 60%; min-width:0; }
+  .fiche-notes-panel{
+    flex:1 1 340px; max-width:380px; position:sticky; top:20px;
+    background:#FFFDF6; border:1px solid var(--line); border-radius:12px; padding:18px 20px;
+  }
+  .fiche-notes-panel .fnp-title{ font-weight:700; font-size:14px; color:#9C5A3C; margin-bottom:4px; display:flex; align-items:center; gap:6px; }
+  .fiche-notes-panel .fnp-sub{ font-size:11.5px; color:var(--muted); margin-bottom:10px; }
+  .fiche-notes-panel textarea{
+    width:100%; min-height:340px; resize:vertical; border:1px solid var(--line); border-radius:8px;
+    padding:12px 14px; font-family:'Inter',sans-serif; font-size:13.5px; line-height:1.6; background:#fff;
+  }
+  .fiche-notes-panel textarea:focus{ outline:none; border-color:#9C5A3C; }
+  .fnp-status{ font-size:11.5px; color:var(--muted); margin-top:6px; min-height:16px; }
+  .fnp-status.saved{ color:#3D6B4F; }
+  @media (max-width: 900px){
+    .fiche-with-notes{ flex-direction:column; }
+    .fiche-notes-panel{ max-width:100%; width:100%; position:static; }
+  }
+
+  /* ---------- Section Mes notes ---------- */
+  .note-card{ background:var(--paper-2); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:14px; }
+  .note-card .nc-title{ font-weight:700; font-size:14.5px; margin-bottom:2px; }
+  .note-card .nc-sub{ font-size:12px; color:var(--muted); margin-bottom:10px; }
+  .note-card .nc-excerpt{ font-size:13px; line-height:1.55; color:#3a362e; white-space:pre-wrap; margin-bottom:10px; }
+  .note-card .nc-open{ padding:6px 13px; border-radius:8px; border:1.5px solid #9C5A3C; background:transparent; color:#9C5A3C; font-weight:600; font-size:12.5px; cursor:pointer; }
+  .note-card .nc-open:hover{ background:#9C5A3C; color:#fff; }
+
+
   .progress-bar-track{ width:100%; height:10px; background:var(--line); border-radius:6px; overflow:hidden; }
   .progress-bar-fill{ height:100%; background:#6B4E9E; border-radius:6px; transition:width .2s ease; }
   .progress-row{ display:flex; align-items:center; gap:12px; margin-bottom:16px; }
@@ -289,6 +320,7 @@
     <button class="tab" data-cat="sources"><span class="dot"></span>Fichiers de cours</button>
     <button class="tab" data-cat="progression"><span class="dot"></span>Progression</button>
     <button class="tab" data-cat="recherche"><span class="dot"></span>Recherche</button>
+    <button class="tab" data-cat="notes"><span class="dot"></span>Mes notes</button>
   </div>
   <div class="page" id="page"></div>
 </div>
@@ -733,6 +765,12 @@ async function loadAll(){
     FICHE_PROGRESS = fp ? JSON.parse(fp.value) : {};
   }catch(e){ FICHE_PROGRESS = {}; }
 
+  // Chargement des notes personnelles prises sur chaque fiche
+  try{
+    const fn = await window.storage.get("planner:ficheNotes");
+    FICHE_NOTES = fn ? JSON.parse(fn.value) : {};
+  }catch(e){ FICHE_NOTES = {}; }
+
   loaded = true;
   render();
 }
@@ -770,6 +808,7 @@ function render(){
   if(current==="sources") return renderSources(page);
   if(current==="progression") return renderProgression(page);
   if(current==="recherche") return renderRecherche(page);
+  if(current==="notes") return renderNotesSection(page);
 }
 
 function escapeHtml(s){ return (s||"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
@@ -1440,6 +1479,85 @@ function isFicheDone(ficheKey){
   return !!(FICHE_PROGRESS[ficheKey] && FICHE_PROGRESS[ficheKey].done);
 }
 
+/* ---------- Prise de notes personnelles, par fiche ---------- */
+let FICHE_NOTES = {};
+let NOTE_SAVE_TIMER = null;
+
+function noteFor(ficheKey){
+  return (FICHE_NOTES[ficheKey] && FICHE_NOTES[ficheKey].text) || "";
+}
+
+function onNoteInput(ficheKey){
+  const el = document.getElementById("fnp-textarea");
+  const statusEl = document.getElementById("fnp-status");
+  if(!el) return;
+  if(statusEl){ statusEl.textContent = "Frappe en cours…"; statusEl.classList.remove("saved"); }
+  clearTimeout(NOTE_SAVE_TIMER);
+  NOTE_SAVE_TIMER = setTimeout(() => saveNote(ficheKey, el.value), 700);
+}
+
+async function saveNote(ficheKey, text){
+  const statusEl = document.getElementById("fnp-status");
+  if(text.trim() === ""){
+    delete FICHE_NOTES[ficheKey];
+  } else {
+    FICHE_NOTES[ficheKey] = { text, date: todayStr() };
+  }
+  try{
+    await window.storage.set("planner:ficheNotes", JSON.stringify(FICHE_NOTES));
+    if(statusEl){ statusEl.textContent = "✓ Notes enregistrées"; statusEl.classList.add("saved"); }
+  }catch(e){
+    if(statusEl){ statusEl.textContent = "Erreur d'enregistrement — réessaie."; statusEl.classList.remove("saved"); }
+  }
+}
+
+function renderNotesSection(page){
+  const keysWithNotes = Object.keys(FICHE_NOTES).filter(k => FICHES[k] && noteFor(k).trim() !== "");
+  page.innerHTML = `
+    <h1 style="color:#B5762F">Mes notes</h1>
+    <p class="subtitle">Toutes les notes personnelles prises pendant tes lectures de fiches, retrouvées ici par cours</p>
+    <div class="search-row"><input type="text" id="notes-search" placeholder="Rechercher dans mes notes ou par matière/chapitre…" oninput="renderNotesList()" /></div>
+    <div id="notes-list"></div>
+  `;
+  window._notesKeysCache = keysWithNotes;
+  renderNotesList();
+}
+
+function renderNotesList(){
+  const list = document.getElementById("notes-list");
+  const searchEl = document.getElementById("notes-search");
+  const q = searchEl ? searchEl.value.trim().toLowerCase() : "";
+  let keys = window._notesKeysCache || [];
+  if(q){
+    keys = keys.filter(k => {
+      const f = FICHES[k];
+      return f.matiere.toLowerCase().includes(q) || f.chapitre.toLowerCase().includes(q) || noteFor(k).toLowerCase().includes(q);
+    });
+  }
+  // Regroupe par matière, trie par date de note la plus récente d'abord
+  keys = [...keys].sort((a,b) => (FICHE_NOTES[b].date||"").localeCompare(FICHE_NOTES[a].date||""));
+
+  if(keys.length === 0){
+    list.innerHTML = q
+      ? `<div class="search-empty">Aucune note ne correspond à « ${escapeHtml(q)} ».</div>`
+      : `<div class="empty">Tu n'as encore pris aucune note. Ouvre une fiche de cours (onglet Fiches) : un espace de prise de notes apparaît à côté du contenu.</div>`;
+    return;
+  }
+
+  list.innerHTML = keys.map(k=>{
+    const f = FICHES[k];
+    const note = FICHE_NOTES[k];
+    const excerpt = note.text.length > 320 ? note.text.slice(0,320)+"…" : note.text;
+    return `<div class="note-card">
+      <div class="nc-title">${escapeHtml(f.matiere)} — ${escapeHtml(f.chapitre)}</div>
+      <div class="nc-sub">Dernière modification : ${escapeHtml(note.date||"")}</div>
+      <div class="nc-excerpt">${escapeHtml(excerpt)}</div>
+      <button class="nc-open" onclick="openFicheDirect('${k}')">Ouvrir la fiche et éditer →</button>
+    </div>`;
+  }).join("");
+}
+
+
 function renderFiches(page){
   if(currentFicheId && FICHES[currentFicheId]){
     return renderFicheDetail(page, currentFicheId);
@@ -1526,7 +1644,15 @@ function renderFicheDetail(page, key){
       <input type="text" id="fd-search" placeholder="Rechercher une notion ou une partie dans cette fiche…" oninput="filterFicheDetailContent()" style="flex:1;"/>
       <span id="fd-search-count" style="font-size:12px; color:var(--muted); white-space:nowrap;"></span>
     </div>
-    <div class="fiche-content" id="fiche-content-body">${f[currentFicheTab]}</div>
+    <div class="fiche-with-notes">
+      <div class="fiche-content" id="fiche-content-body">${f[currentFicheTab]}</div>
+      <div class="fiche-notes-panel">
+        <div class="fnp-title">📝 Mes notes</div>
+        <div class="fnp-sub">Personnelles, liées à ce chapitre (${escapeHtml(f.chapitre)}) — enregistrées automatiquement sur cet appareil.</div>
+        <textarea id="fnp-textarea" placeholder="Prends tes notes ici pendant le cours ou la relecture…" oninput="onNoteInput('${key}')">${escapeHtml(noteFor(key))}</textarea>
+        <div class="fnp-status" id="fnp-status"></div>
+      </div>
+    </div>
   `;
 }
 
