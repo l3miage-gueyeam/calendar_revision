@@ -117,11 +117,9 @@
   .course-body{ flex:1; min-width:0; }
   .course-title{ font-weight:600; font-size:14px; }
 
-  /* clickable rows */
   .clickable{ cursor:pointer; transition:border-color .12s ease, transform .12s ease; }
   .clickable:hover{ border-color:var(--line-strong); transform:translateX(2px); }
 
-  /* detail modal */
   .detail-overlay{
     position:fixed; inset:0; background:rgba(34,38,43,0.45);
     display:flex; align-items:center; justify-content:center;
@@ -147,7 +145,6 @@
   .detail-exo{ font-size:13.5px; line-height:1.9; margin-top:6px; }
   .course-meta{ font-size:12.5px; color:var(--muted); margin-top:2px; }
 
-  /* fiches de cours */
   .fiche-tabs{ display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
   .fiche-tab-btn{
     border:1px solid var(--line); background:var(--paper); border-radius:20px;
@@ -181,7 +178,6 @@
   }
   .fiche-check.done{ background:#6B4E9E; }
 
-  /* ---------- Composants visuels enrichis pour les fiches (boîtes, pyramide, flux, formules) ---------- */
   .fiche-grid2{ display:flex; flex-wrap:wrap; gap:14px; margin:0 0 16px; }
   .fiche-grid2 > *{ flex:1 1 260px; min-width:0; }
   .fiche-grid3{ display:flex; flex-wrap:wrap; gap:12px; margin:0 0 16px; }
@@ -236,7 +232,6 @@
     display:flex; align-items:flex-end; justify-content:center; padding-bottom:6px; font-size:9.5px; font-weight:700; color:#6B4B00; text-align:center; }
   .fiche-diagram-frame{ border:1px solid var(--line); border-radius:10px; padding:16px; margin:0 0 16px; background:#FCFCFC; }
 
-  /* ---------- Recherche (RAG local sur les fiches) ---------- */
   .search-bar{ display:flex; gap:10px; margin-bottom:20px; }
   .search-bar input[type="text"]{
     flex:1; padding:12px 16px; border-radius:10px; border:1.5px solid var(--line); font-family:'Inter',sans-serif; font-size:14.5px; background:var(--paper-2);
@@ -265,7 +260,6 @@
   .search-result .sr-open:hover{ background:#9C5A3C; color:#fff; }
   .search-empty{ color:var(--muted); font-size:13.5px; padding:20px 0; }
 
-  /* ---------- Double-page : fiche + prise de notes ---------- */
   .fiche-with-notes{ display:flex; gap:22px; align-items:flex-start; }
   .fiche-with-notes .fiche-content{ flex:1 1 60%; min-width:0; }
   .fiche-notes-panel{
@@ -286,14 +280,12 @@
     .fiche-notes-panel{ max-width:100%; width:100%; position:static; }
   }
 
-  /* ---------- Section Mes notes ---------- */
   .note-card{ background:var(--paper-2); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:14px; }
   .note-card .nc-title{ font-weight:700; font-size:14.5px; margin-bottom:2px; }
   .note-card .nc-sub{ font-size:12px; color:var(--muted); margin-bottom:10px; }
   .note-card .nc-excerpt{ font-size:13px; line-height:1.55; color:#3a362e; white-space:pre-wrap; margin-bottom:10px; }
   .note-card .nc-open{ padding:6px 13px; border-radius:8px; border:1.5px solid #9C5A3C; background:transparent; color:#9C5A3C; font-weight:600; font-size:12.5px; cursor:pointer; }
   .note-card .nc-open:hover{ background:#9C5A3C; color:#fff; }
-
 
   .progress-bar-track{ width:100%; height:10px; background:var(--line); border-radius:6px; overflow:hidden; }
   .progress-bar-fill{ height:100%; background:#6B4E9E; border-radius:6px; transition:width .2s ease; }
@@ -707,6 +699,47 @@ const FICHES = {
     resume: "<div class='fiche-sources'><strong>📎 PDF associé à ce chapitre :</strong><ul class='fiche-ul'><li>3.Activites2020_handout.pdf</li></ul></div> <h3 class='fiche-h1'>1. Le génie logiciel ne se limite pas au codage</h3> <p class='fiche-p'>Le génie logiciel couvre l'étude des techniques, méthodes et outils de développement de logiciel. Le client est surtout concerné par 4 questions :</p> <ul class='fiche-ul'> <li>Est-ce le <strong>bon produit</strong> ? (résout-il mon problème ?)</li> <li>Le produit est-il <strong>bon</strong> ? (sans bugs, efficace...)</li> <li>Combien de temps avant la <strong>livraison</strong> ?</li> <li>Le produit pourra-t-il <strong>évoluer</strong> selon l'évolution de mes besoins ?</li> </ul> <h3 class='fiche-h1'>2. Les 5 étapes du développement (structure en V)</h3> <div class='fiche-diagram-frame'><p class='fiche-p' style='text-align:center;font-weight:700;margin-bottom:0;'>Les 5 étapes et leurs livrables, organisées en cycle en V</p> <svg viewBox=\"0 0 600 310\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:580px;display:block;margin:10px auto;\"> <defs><marker id=\"agv\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#888\"/></marker></defs><rect x=\"20\" y=\"30\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#EAF2FB\" stroke=\"#2F6FB0\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"54.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#2F6FB0\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Analyse des besoins</tspan><tspan x=\"95.0\" dy=\"14\">→ Cahier des charges</tspan></text><rect x=\"20\" y=\"100\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#EAF2FB\" stroke=\"#2F6FB0\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"124.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#2F6FB0\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Spécification</tspan><tspan x=\"95.0\" dy=\"14\">→ Spécifications</tspan></text><rect x=\"20\" y=\"170\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#EAF2FB\" stroke=\"#2F6FB0\" stroke-width=\"1.4\"/><text x=\"95.0\" y=\"194.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#2F6FB0\" text-anchor=\"middle\"><tspan x=\"95.0\" dy=\"0\">Conception</tspan><tspan x=\"95.0\" dy=\"14\">→ Architecture</tspan></text><rect x=\"430\" y=\"30\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#E4F5E8\" stroke=\"#2E8B4E\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"61.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#2E8B4E\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test d'acceptation</tspan></text><rect x=\"430\" y=\"100\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#E4F5E8\" stroke=\"#2E8B4E\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"131.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#2E8B4E\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test système</tspan></text><rect x=\"430\" y=\"170\" width=\"150\" height=\"55\" rx=\"7\" fill=\"#E4F5E8\" stroke=\"#2E8B4E\" stroke-width=\"1.4\"/><text x=\"505.0\" y=\"201.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#2E8B4E\" text-anchor=\"middle\"><tspan x=\"505.0\" dy=\"0\">Test d'intégration</tspan></text><rect x=\"225\" y=\"240\" width=\"150\" height=\"45\" rx=\"7\" fill=\"#EFE6F9\" stroke=\"#6B4E9E\" stroke-width=\"1.4\"/><text x=\"300.0\" y=\"259.5\" font-size=\"8.5\" font-weight=\"700\" fill=\"#6B4E9E\" text-anchor=\"middle\"><tspan x=\"300.0\" dy=\"0\">Codage</tspan><tspan x=\"300.0\" dy=\"14\">→ code</tspan></text><line x1=\"170\" y1=\"57\" x2=\"430\" y2=\"57\" stroke=\"#ccc\" stroke-width=\"1.6\" marker-end=\"url(#arrowhead)\"/><line x1=\"170\" y1=\"127\" x2=\"430\" y2=\"127\" stroke=\"#ccc\" stroke-width=\"1.6\" marker-end=\"url(#arrowhead)\"/><line x1=\"170\" y1=\"197\" x2=\"430\" y2=\"197\" stroke=\"#ccc\" stroke-width=\"1.6\" marker-end=\"url(#arrowhead)\"/><line x1=\"95\" y1=\"85\" x2=\"95\" y2=\"100\" stroke=\"#888\" stroke-width=\"1.6\" marker-end=\"url(#agv)\"/><line x1=\"95\" y1=\"155\" x2=\"95\" y2=\"170\" stroke=\"#888\" stroke-width=\"1.6\" marker-end=\"url(#agv)\"/><line x1=\"170\" y1=\"197\" x2=\"225\" y2=\"250\" stroke=\"#888\" stroke-width=\"1.6\" marker-end=\"url(#agv)\"/><line x1=\"375\" y1=\"250\" x2=\"430\" y2=\"197\" stroke=\"#888\" stroke-width=\"1.6\" marker-end=\"url(#agv)\"/><line x1=\"505\" y1=\"155\" x2=\"505\" y2=\"170\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#agv)\"/><line x1=\"505\" y1=\"85\" x2=\"505\" y2=\"100\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#agv)\"/> </svg> </div> <div class='fiche-grid2'> <div class='fiche-box box-blue'><div class='fbx-title'>Analyse des besoins</div><ul> <li>Interactions avec le client pour bien identifier ses besoins</li> <li>Produit un <strong>cahier des charges</strong></li> <li>Étape critique pour développer le <strong>bon</strong> produit</li> </ul></div> <div class='fiche-box box-purple'><div class='fbx-title'>Spécification</div><ul> <li>Modélisation du problème ou de sa solution</li> <li>Le besoin est structuré et exprimé de façon précise</li> <li>Description des fonctionnalités et interfaces</li> <li>Produit des <strong>spécifications</strong> : documents de référence pour la suite</li> </ul></div> </div> <div class='fiche-grid2'> <div class='fiche-box box-orange'><div class='fbx-title'>Conception</div><ul> <li>Définition de l'<strong>architecture</strong> de la solution</li> <li>Choix de décomposition en composants, structures de données, algorithmes</li> <li>Étape critique pour l'évolution future du produit ; conditionne la qualité (performances, évolution)</li> </ul></div> <div class='fiche-box box-green'><div class='fbx-title'>Codage</div><ul> <li>Réalisation technique du produit</li> <li>Mise en oeuvre des techniques informatiques (langages, BD, OS...)</li> </ul></div> </div> <div class='fiche-box box-yellow'><div class='fbx-title'>Tests</div><ul> <li>Vérification que les objectifs de chaque étape intermédiaire se retrouvent bien dans le logiciel</li> </ul></div> <h3 class='fiche-h1'>3. Les activités transverses</h3> <div class='fiche-grid2'> <div class='fiche-box box-blue'><div class='fbx-title'>Gestion de projet</div><ul> <li>Gestion du temps et des ressources du projet</li> <li>Prévoir le coût du projet</li> <li>Identifier et prévenir les risques</li> <li>Fournir le produit dans les temps et au meilleur coût</li> </ul></div> <div class='fiche-box box-purple'><div class='fbx-title'>Assurance qualité</div><ul> <li>Assure la qualité du produit final</li> <li>Par des contrôles sur le produit</li> <li>Par le contrôle du processus qui mène à sa réalisation</li> </ul></div> </div> <h3 class='fiche-h1'>4. Évolution et maintenance</h3> <p class='fiche-p'>La vie du produit ne s'arrête pas à sa livraison :</p> <ul class='fiche-ul'> <li><strong>Maintenance corrective :</strong> corriger les erreurs</li> <li><strong>Maintenance évolutive :</strong> adapter le produit aux évolutions de son environnement (ex : ajout de fonctionnalités, passage à un nouvel OS)</li> </ul> <h3 class='fiche-h1'>5. La sous-traitance « off-shore »</h3> <p class='fiche-p'>Les phases de <strong>codage</strong>, de <strong>conception détaillée</strong>, et certaines phases de <strong>test</strong> sont souvent réalisées dans des pays où la main d'oeuvre est moins chère.</p> <p class='fiche-note'>Les autres phases (analyse des besoins, spécification, conception globale) demandent d'être proches du client, ou correspondent au savoir-faire « métier » de l'entreprise, qu'il s'agit de protéger — elles restent donc généralement en interne.</p>",
     fiche: "<h3 class='fiche-h1'>Les 5 étapes et leur livrable</h3> <table class='fiche-table'><thead><tr><th>Étape</th><th>Livrable</th></tr></thead><tbody> <tr><td>Analyse des besoins</td><td>Cahier des charges</td></tr> <tr><td>Spécification</td><td>Document de spécifications</td></tr> <tr><td>Conception</td><td>Architecture</td></tr> <tr><td>Codage</td><td>Code source</td></tr> <tr><td>Tests</td><td>Vérification de conformité à chaque étape</td></tr> </tbody></table> <h3 class='fiche-h1'>2 activités transverses</h3> <p class='fiche-p'>Gestion de projet (temps, coût, risques) + Assurance qualité (contrôle produit et processus).</p> <h3 class='fiche-h1'>Maintenance</h3> <p class='fiche-p'>Corrective (corriger) vs Évolutive (adapter/enrichir).</p> <h3 class='fiche-h1'>Off-shore</h3> <p class='fiche-p'>Codage + conception détaillée + certains tests → délocalisables. Besoins/spécification/conception globale → restent proches du client (savoir-faire métier à protéger).</p>",
     corriges: "<h3 class='fiche-h1'>Exercice — Associer étape et question du client</h3> <p class='fiche-p'>Pour chacune des 4 questions que se pose le client, identifie l'étape (ou les étapes) du développement la/les plus directement concernée(s) :</p> <ol class='fiche-ul'> <li>« Est-ce le bon produit ? »</li> <li>« Le produit est-il bon (sans bugs) ? »</li> <li>« Combien de temps avant la livraison ? »</li> <li>« Le produit pourra-t-il évoluer ? »</li> </ol> <p class='fiche-p'><strong>Corrigé :</strong></p> <ol class='fiche-ul'> <li><strong>Analyse des besoins</strong> — c'est l'étape qui garantit que le produit développé correspond bien au problème réel du client ; une erreur ici se répercute sur tout le reste.</li> <li><strong>Tests</strong> (et transversalement l'Assurance Qualité) — c'est la vérification que les objectifs de chaque étape se retrouvent effectivement dans le logiciel livré.</li> <li><strong>Gestion de projet</strong> — activité transverse chargée de la gestion du temps et des ressources pour livrer dans les délais annoncés.</li> <li><strong>Conception</strong> — l'architecture choisie (décomposition en composants, structures de données) conditionne directement la capacité du produit à évoluer facilement par la suite.</li> </ol> <p class='fiche-note'>Méthode : bien distinguer les 5 étapes séquentielles (besoins → spécification → conception → codage → tests) des 2 activités transverses qui s'exercent tout au long du projet (gestion de projet, assurance qualité) — une question d'examen classique consiste à replacer une préoccupation du client sur cette grille.</p>"
+  },'gl-gestion-projets': {
+    matiere: "GL (Génie Logiciel)",
+    chapitre: "Organisation et gestion d'un projet",
+    resume: "<div class=\"fiche-sources\"><strong>📎 PDF associé à ce chapitre :</strong><ul class=\"fiche-ul\"><li>5. Gestion-projets.pdf</li></ul></div><h3 class=\"fiche-h1\">1. Estimation et Durée</h3><p class=\"fiche-p\">L'estimation vise à déterminer la durée du projet et l'effort nécessaire, souvent mesuré en hommes*jour ou hommes*mois. Attention : un projet de 12 hommes*mois ne peut pas être réalisé par 240 personnes en 1 jour en raison des coûts incompressibles de coordination et d'intégration. L'estimation s'appuie sur l'expérience, des modèles (COCOMO, Points de fonction) ou le Planning poker en agile.</p><h3 class=\"fiche-h1\">2. Planification et Graphe de précédence</h3><p class=\"fiche-p\">L'ordre des tâches est modélisé par un graphe de précédence. Les liens typiques sont : Début-Fin (B commence après le début de A), Fin-Début (très courant : B commence après la fin de A), et Fin-Fin. Les boucles y sont interdites.</p><div class='fiche-grid2'><div class='fiche-box box-blue'><div class='fbx-title'>Chemin critique et Marges</div><ul><li><strong>Chemin critique :</strong> Ensemble des tâches de marge nulle qui déterminent la durée minimale du projet.</li><li><strong>Marge totale :</strong> Durée dont on peut décaler une tâche sans décaler la fin du projet.</li><li><strong>Marge libre :</strong> Durée dont on peut décaler une tâche sans décaler la suivante.</li></ul></div><div class='fiche-box box-orange'><div class='fbx-title'>Nivellement des ressources</div><ul><li>Ajuste le planning à la disponibilité réelle (ex: un expert).</li><li><strong>Durée fixe :</strong> la durée des tâches ne change pas.</li><li><strong>Charge fixe :</strong> la durée des tâches peut augmenter ou diminuer.</li></ul></div></div><h3 class=\"fiche-h1\">3. Le Suivi (Burndown Chart)</h3><p class=\"fiche-p\">Très utilisé en contexte agile, ce graphique compare la ligne du travail restant \"idéal\" à la ligne du travail restant \"effectif\" au fil du temps (jours ou sprints) pour visualiser l'avance ou le retard.</p>",
+    fiche: "<h3 class=\"fiche-h1\">Notions clés de gestion de projet</h3><ul class=\"fiche-ul\"><li><strong>Effort vs Durée :</strong> Ajouter des ressources n'accélère pas proportionnellement le projet (coûts de synchronisation).</li><li><strong>Chemin critique :</strong> Les tâches à marge nulle. Si l'une d'elles prend du retard, tout le projet est retardé.</li><li><strong>Graphe de précédence :</strong> Identifie les dépendances (Fin-Début est la plus fréquente).</li><li><strong>Burndown chart :</strong> Visualise le \"reste à faire\" au fil du temps.</li></ul>",
+    corriges: "<p class=\"fiche-p\">Pas d'annales dédiées à ce chapitre. Les exercices se concentrent généralement sur la modélisation UML et la spécification formelle.</p>"
+  },
+  'pdl-temporalites': {
+    matiere: "Processus de développement et spécification formelle",
+    chapitre: "Extensions temporelles pour UML",
+    resume: "<div class=\"fiche-sources\"><strong>📎 PDF associé à ce chapitre :</strong><ul class=\"fiche-ul\"><li>6. Temporalites pour UML.pdf</li></ul></div><h3 class=\"fiche-h1\">1. Intension vs Extension</h3><p class=\"fiche-p\">Dans un système, on distingue l'<strong>intension</strong> (l'ensemble potentiellement infini de toutes les entités possibles d'une sorte) de l'<strong>extension</strong> (l'ensemble toujours fini des entités réellement présentes dans le système d'information).</p><h3 class=\"fiche-h1\">2. Limites des modèles statiques UML</h3><p class=\"fiche-p\">Un diagramme de classes spécifie des \"instantanés\" du système. Cette vue statique crée parfois des blocages dynamiques : par exemple, si une entité impose de remplacer une adresse par une autre en conservant une multiplicité stricte, la même action dynamique doit détruire l'ancien lien et créer le nouveau simultanément.</p><h3 class=\"fiche-h1\">3. Les Temporalités [T]</h3><p class=\"fiche-p\">Pour assouplir ces contraintes, on introduit une notation non-standard en UML : la temporalité, notée <code>[T]</code>. Elle permet de relâcher une contrainte statique pendant \"un certain temps\" fini, garantissant que la contrainte finira par s'appliquer dans le futur.</p><div class='fiche-grid2'><div class='fiche-box box-blue'><div class='fbx-title'>Motivations d'une temporalité</div><ul><li><strong>Monde réel :</strong> Ex. toute personne finira par décéder, tout étudiant aura un jour des résultats.</li><li><strong>Contraintes techniques :</strong> Ex. éviter de devoir créer deux objets simultanément dans une même transaction.</li></ul></div></div>",
+    fiche: "<h3 class=\"fiche-h1\">Extensions temporelles en bref</h3><ul class=\"fiche-ul\"><li><strong>Intension :</strong> Toutes les valeurs possibles (infini).</li><li><strong>Extension :</strong> Valeurs actuellement en base (fini).</li><li><strong>Notation [T] :</strong> Permet de contourner la rigidité des modèles statiques en indiquant qu'une contrainte (ex. avoir des résultats, avoir une date de décès) se vérifiera <em>plus tard</em>, de manière certaine mais différée.</li></ul>",
+    corriges: "<p class=\"fiche-p\">Chapitre conceptuel servant d'introduction aux spécifications Z. Voir la fiche sur le traitement des partialités.</p>"
+  },
+  'pdl-intro-formelle': {
+    matiere: "Processus de développement et spécification formelle",
+    chapitre: "Introduction à la spécification formelle",
+    resume: "<div class=\"fiche-sources\"><strong>📎 PDF associé à ce chapitre :</strong><ul class=\"fiche-ul\"><li>7. Spécification formelle.pdf</li></ul></div><h3 class=\"fiche-h1\">1. Les limites du langage naturel</h3><p class=\"fiche-p\">Les spécifications écrites en langage naturel (français, anglais) souffrent fréquemment d'ambiguïtés, d'incohérences et d'incomplétude. Les spécifications graphiques (comme UML) ont aussi des limites car leur sémantique n'est pas toujours précisément définie (confusion entre agrégation/composition, impossibilité d'exprimer des règles conditionnelles strictes).</p><h3 class=\"fiche-h1\">2. L'apport des langages formels</h3><p class=\"fiche-p\">Basés sur les mathématiques, les langages formels donnent une signification rigoureuse permettant : d'écrire des spécifications non ambiguës, de générer des tests, d'animer les modèles, et de prouver mathématiquement certaines propriétés.</p><h3 class=\"fiche-h1\">3. Propriétés vs Modèles</h3><table class=\"fiche-table\"><thead><tr><th>Approche</th><th>Description</th></tr></thead><tbody><tr><td>À base de propriétés</td><td>Liste les attentes. Avantage : grande liberté d'implémentation. Inconvénient : difficile d'avoir une liste complète et cohérente.</td></tr><tr><td>À base de modèles</td><td>Utilise des objets mathématiques (ensembles, fonctions) pour encapsuler un ensemble de propriétés (ex. Z, VDM, B).</td></tr></tbody></table><p class=\"fiche-note\">Les langages formels se divisent en langages orientés objets (OCL, JML) et langages non-objets (Z, VDM, B). Le langage B permet notamment de développer des logiciels prouvés sans bugs critiques (ex. Ligne 14 du métro parisien).</p>",
+    fiche: "<h3 class=\"fiche-h1\">Pourquoi la spécification formelle ?</h3><ul class=\"fiche-ul\"><li>Le langage naturel et l'UML sont trop ambigus ou limités sémantiquement.</li><li>Les mathématiques lèvent l'ambiguïté et permettent la preuve et la génération d'outils.</li><li>Z et B sont des langages non-objets, à base de modèles (ensembles, fonctions).</li></ul>",
+    corriges: "<p class=\"fiche-p\">Pas d'annales dédiées à ce chapitre d'introduction théorique.</p>"
+  },
+  'pdl-notations-z': {
+    matiere: "Processus de développement et spécification formelle",
+    chapitre: "Concepts et notations Z",
+    resume: "<div class=\"fiche-sources\"><strong>📎 PDF associé à ce chapitre :</strong><ul class=\"fiche-ul\"><li>8. Concepts et notations Z.pdf</li></ul></div><h3 class=\"fiche-h1\">1. Données et Schémas</h3><p class=\"fiche-p\">Z s'appuie sur des <em>machines abstraites</em> : un état interne caché, uniquement manipulable via des opérations.</p><div class='fiche-grid3'><div class='fiche-box box-blue'><div class='fbx-title'>Ensembles de base</div><ul><li><strong>Donné :</strong> <code>[NOM]</code> (contenu inconnu).</li><li><strong>Énuméré :</strong> <code>Bool ::= True | False</code>.</li><li><strong>Prédéfini :</strong> <code>Z</code> (entiers).</li></ul></div><div class='fiche-box box-purple'><div class='fbx-title'>Sous-ensembles</div><ul><li><strong>Parties :</strong> <code>P NAME</code> (toutes les parties).</li><li><strong>Parties finies :</strong> <code>F NAME</code> (utile en informatique).</li><li><strong>Compréhension :</strong> <code>{decl | pred &bull; expr}</code>.</li></ul></div><div class='fiche-box box-green'><div class='fbx-title'>Boîtes axiomatiques</div><ul><li>Déclare des constantes dans la partie supérieure et leurs contraintes associées dans la partie inférieure.</li></ul></div></div><h3 class=\"fiche-h1\">2. Relations et Fonctions</h3><p class=\"fiche-p\">Toute relation est basée sur un produit cartésien : <code>A &harr; B == P(A &times; B)</code>. Z propose des flèches spécialisées pour les fonctions :</p><table class=\"fiche-table\"><thead><tr><th>Symbole</th><th>Signification</th></tr></thead><tbody><tr><td><code>&mapsto;</code></td><td>Fonction partielle</td></tr><tr><td><code>&rarr;</code></td><td>Fonction totale</td></tr><tr><td><code>&longmapsto;</code> / <code>&longrightarrow;</code></td><td>Fonction injective / bijective</td></tr></tbody></table><p class=\"fiche-p\">L'opérateur de <strong>superposition</strong> (overriding) <code>f &oplus; g</code> fait l'union de deux fonctions, en gardant prioritairement <code>g</code> en cas de conflit.</p><h3 class=\"fiche-h1\">3. Les Schémas en Z</h3><p class=\"fiche-p\">Le schéma est l'unité de structuration en Z (c'est une boîte axiomatique nommée). Il peut être <strong>inclus</strong> dans un autre schéma (copie intégrale de son texte) ou utilisé comme un <strong>type structuré</strong> (façon <em>record</em> ou <em>struct</em>).</p>",
+    fiche: "<h3 class=\"fiche-h1\">Symboles Z à connaître par cœur</h3><ul class=\"fiche-ul\"><li><code>[A]</code> : Ensemble donné.</li><li><code>P A</code> / <code>F A</code> : Ensemble de toutes les parties / parties finies.</li><li><code>&rarr;</code> : Fonction totale (tout élément de départ a une image).</li><li><code>&mapsto;</code> : Fonction partielle.</li><li><code>&oplus;</code> : Superposition (remplacement prioritaire).</li></ul><h3 class=\"fiche-h1\">Schémas</h3><p class=\"fiche-p\">Permettent de regrouper des variables et des prédicats. L'inclusion d'un schéma A dans un schéma B recopie textuellement les déclarations et ajoute les prédicats avec un <em>ET</em> logique.</p>",
+    corriges: "<p class=\"fiche-p\">Chapitre de syntaxe. Se référer aux exercices complets de spécification d'opérations et d'états.</p>"
+  },
+  'pdl-partialites': {
+    matiere: "Processus de développement et spécification formelle",
+    chapitre: "Traitement des partialités",
+    resume: "<div class=\"fiche-sources\"><strong>📎 PDF associé à ce chapitre :</strong><ul class=\"fiche-ul\"><li>9._Partialites.pdf</li></ul></div><h3 class=\"fiche-h1\">1. Traduction des temporalités [T] en Z</h3><p class=\"fiche-p\">Z décrit des propriétés invariantes valables à tout instant, il ne possède pas de logique temporelle pour formuler \"ceci arrivera dans le futur\". Pour contourner cela, on traduit une temporalité par :</p><ol class=\"fiche-ul\"><li>Une <strong>partialité</strong> dans la structure de données.</li><li>La création d'une <strong>opération de consultation</strong> qui permet au SI de repérer ce qui n'est pas encore rempli (ex: extraire la liste des étudiants non encore inscrits).</li></ol><h3 class=\"fiche-h1\">2. Traduction des attributs partiels</h3><p class=\"fiche-p\">Il n'y a pas de traduction universelle automatisable pour un attribut qui autorise la valeur vide (ex: [0..1] en UML). Le concepteur doit choisir au cas par cas parmi ces stratégies :</p><div class='fiche-grid2'><div class='fiche-box box-blue'><div class='fbx-title'>Attributs multi-valués [*]</div><ul><li>Le cas le plus simple. Se traduit naturellement par un <strong>ensemble</strong> (ex: <code>sports: F SPORT</code>). L'absence de valeur donne juste un ensemble vide <code>&empty;</code> sans violer le type.</li></ul></div><div class='fiche-box box-purple'><div class='fbx-title'>Attributs mono-valués [0..1]</div><ul><li><strong>Valeur aberrante / par défaut :</strong> Utiliser une valeur du domaine (ex. 9/9/99 pour une date) ou hors domaine (ex. -1 pour une note sur 20).</li><li><strong>Ajout au type :</strong> Créer une valeur dédiée (ex. <code>notapplicable</code>) dans le type énuméré.</li><li><strong>Héritage / Disjonction :</strong> Créer des sous-schémas distincts (ex. Un schéma avec l'attribut, un schéma sans) et définir la classe mère comme la disjonction (<code>&or;</code>) de ces sous-schémas.</li></ul></div></div>",
+    fiche: "<h3 class=\"fiche-h1\">Gérer l'absence de valeur en Z</h3><ul class=\"fiche-ul\"><li><strong>Temporalités [T] :</strong> Devient une fonction partielle + une requête de vérification.</li><li><strong>[*] Multivalué :</strong> Devient simplement un ensemble (<code>F</code>). Le vide est géré nativement (<code>&empty;</code>).</li><li><strong>[0..1] Monovalué :</strong> Pas de <code>null</code> en Z. 3 solutions :<br>1. Valeur sentinelle (-1, 9999).<br>2. Valeur explicite dans un type énuméré (<code>not_applicable</code>).<br>3. Disjonction de schémas (héritage Z).</li></ul>",
+    corriges: "<p class=\"fiche-p\">Les examens Z évaluent régulièrement la capacité à justifier le choix de partialité sur un modèle UML fourni.</p>"
+  },
+  'pdl-operations': {
+    matiere: "Processus de développement et spécification formelle",
+    chapitre: "Opérations en Z",
+    resume: "<div class=\"fiche-sources\"><strong>📎 PDF associé à ce chapitre :</strong><ul class=\"fiche-ul\"><li>10. Operations.pdf</li></ul></div><h3 class=\"fiche-h1\">1. Sémantique Avant/Après</h3><p class=\"fiche-p\">Une opération Z est un schéma qui contraint le passage d'un état à un autre, tout en laissant totale liberté d'implémentation sur le \"comment\".</p><ul class=\"fiche-ul\"><li><code>x</code> désigne la valeur <strong>avant</strong> l'opération (état initial).</li><li><code>x'</code> désigne la valeur <strong>après</strong> l'opération (état final).</li><li><code>i?</code> désigne un paramètre d'<strong>entrée</strong>.</li><li><code>o!</code> désigne un paramètre de <strong>sortie</strong>.</li></ul><p class=\"fiche-note\">L'expression <code>x' = x + 1</code> n'est PAS une assignation informatique, c'est un prédicat logique (on pourrait l'écrire <code>x' - x = 1</code>).</p><h3 class=\"fiche-h1\">2. Modification vs Lecture Seule</h3><table class=\"fiche-table\"><thead><tr><th>Inclusion</th><th>Signification</th></tr></thead><tbody><tr><td><code>&Delta;Schema</code></td><td>Accès en <strong>lecture et écriture</strong>. Inclut implicitement le <code>Schema</code> (état initial) et <code>Schema'</code> (état final). Permet de modifier les variables.</td></tr><tr><td><code>&Xi;Schema</code></td><td>Accès en <strong>lecture seule</strong>. Équivaut à <code>&Delta;Schema</code> + une contrainte stricte d'égalité <code>x = x'</code> sur toutes les variables de l'état. Indispensable pour une opération de consultation, sinon le système serait autorisé à muter les données.</td></tr></tbody></table><h3 class=\"fiche-h1\">3. Préconditions</h3><p class=\"fiche-p\">Une précondition est une contrainte ajoutée à l'opération qui porte uniquement sur l'état initial et les paramètres d'entrée. Elle définit dans quelles circonstances le système garantit le bon fonctionnement de l'opération (ex. <code>st? &in; groupA &cup; groupB</code> pour chercher le groupe d'un étudiant). En dehors de cette précondition, le comportement du système est totalement imprévisible (non spécifié).</p>",
+    fiche: "<h3 class=\"fiche-h1\">Variables dans les opérations</h3><ul class=\"fiche-ul\"><li><code>x</code> = État initial</li><li><code>x'</code> = État final</li><li><code>param?</code> = Entrée</li><li><code>param!</code> = Sortie</li></ul><h3 class=\"fiche-h1\">Les modificateurs d'état</h3><table class=\"fiche-table\"><thead><tr><th>Modificateur</th><th>Type d'accès</th></tr></thead><tbody><tr><td><code>&Delta;Etat</code></td><td>Modifie l'état. Contient <code>Etat</code> et <code>Etat'</code>.</td></tr><tr><td><code>&Xi;Etat</code></td><td>Consulte l'état. Contient <code>&Delta;Etat</code> + <code>x = x'</code> pour chaque variable.</td></tr></tbody></table><h3 class=\"fiche-h1\">Préconditions</h3><p class=\"fiche-p\">Restreignent le domaine de validité de l'opération aux états/entrées acceptables. Un appel hors précondition provoque un comportement non garanti.</p>",
+    corriges: "<p class=\"fiche-p\">C'est le cœur de la spécification Z. Les exercices classiques demandent de rédiger le schéma d'une opération d'ajout, de retrait, ou de consultation en n'oubliant pas les préconditions et le symbole &Delta; ou &Xi; approprié.</p>"
   }
 };
 </script>
@@ -738,7 +771,6 @@ function mondayOf(dateObj){
 function fmtDateFR(d){
   return d.toLocaleDateString("fr-FR", { day:"2-digit", month:"2-digit" });
 }
-// Remonte l'élément du jour en tête de liste, en conservant l'ordre habituel pour le reste.
 function reorderTodayFirst(items, dateOf){
   const today = todayStr();
   const idxToday = items.findIndex(it => dateOf(it) === today);
@@ -767,8 +799,6 @@ async function loadAll(){
     }
   }
 
-  // Ré-importe automatiquement si une nouvelle version des données pré-remplies est disponible,
-  // tout en conservant les éléments ajoutés manuellement.
   for(const cat of Object.keys(IMPORTS)){
     const cfg = IMPORTS[cat];
     let storedVersion = null;
@@ -784,13 +814,11 @@ async function loadAll(){
     }
   }
 
-  // Chargement du suivi de progression des fiches (indépendant du système d'import)
   try{
     const fp = await window.storage.get("planner:ficheProgress");
     FICHE_PROGRESS = fp ? JSON.parse(fp.value) : {};
   }catch(e){ FICHE_PROGRESS = {}; }
 
-  // Chargement des notes personnelles prises sur chaque fiche
   try{
     const fn = await window.storage.get("planner:ficheNotes");
     FICHE_NOTES = fn ? JSON.parse(fn.value) : {};
@@ -846,28 +874,24 @@ async function resetCurrent(){
   render();
 }
 
-/* ---------- AUJOURD'HUI ---------- */
 function renderToday(page){
   const today = todayStr();
   const now = new Date();
-  const todayIdxMon0 = (now.getDay()+6)%7; // 0=lundi
-  const todayAbbrev = JOURS[todayIdxMon0];        // "Lun", "Mar", ...
-  const todayLong = JOURS_LONG[todayIdxMon0];      // "lundi", "mardi", ...
+  const todayIdxMon0 = (now.getDay()+6)%7;
+  const todayAbbrev = JOURS[todayIdxMon0];
+  const todayLong = JOURS_LONG[todayIdxMon0];
 
   const coursAujourdhui = DATA.cours.filter(i=>i.date===today).sort((a,b)=>(a.heureDebut||"").localeCompare(b.heureDebut||""));
 
-  // Révisions : programme du jour (basé sur les cours + sport du jour) + échéances dues/en retard
   const monday = mondayOf(now);
   const todayPlan = buildDayPlan(now).filter(b=>b.type!=="note");
   const revDue = DATA.revisions.filter(i=>!i.done && i.echeance && i.echeance<=today);
   const revCount = todayPlan.filter(b=>b.type!=="repos" && b.type!=="sport").length + revDue.length;
 
-  // Alternance : statut de la semaine en cours
   const mondayStr = toLocalISO(monday);
   const altThisWeek = DATA.alternance.find(i=>i.date===mondayStr);
   const altCount = altThisWeek ? 1 : 0;
 
-  // Sport : séance(s) prévue(s) aujourd'hui
   const sportAujourdhui = DATA.sport.filter(i=>i.jour===todayAbbrev);
 
   let html = `<h1>Aujourd'hui</h1><p class="subtitle">${now.toLocaleDateString("fr-FR",{weekday:"long", day:"numeric", month:"long"})}</p>`;
@@ -878,7 +902,6 @@ function renderToday(page){
     <div class="stat-card" data-cat="sport" onclick="switchTab('sport')"><div class="n">${sportAujourdhui.length}</div><div class="l">séance(s) de sport</div></div>
   </div>`;
 
-  // --- Cours du jour ---
   html += `<div class="section-label">Cours du jour</div><div class="list">`;
   if(coursAujourdhui.length===0){
     html += `<div class="empty">Aucun cours aujourd'hui.</div>`;
@@ -889,7 +912,6 @@ function renderToday(page){
   }
   html += `</div>`;
 
-  // --- Révisions du jour ---
   html += `<div class="section-label">Révisions du jour</div><div class="list">`;
   const revBlocks = todayPlan.filter(b=>b.type!=="repos" && b.type!=="sport");
   if(revBlocks.length===0 && revDue.length===0){
@@ -907,7 +929,6 @@ function renderToday(page){
   }
   html += `</div>`;
 
-  // --- Alternance ---
   html += `<div class="section-label">Alternance cette semaine</div><div class="list">`;
   if(!altThisWeek){
     html += `<div class="empty">Pas d'information pour cette semaine.</div>`;
@@ -916,7 +937,6 @@ function renderToday(page){
   }
   html += `</div>`;
 
-  // --- Sport du jour ---
   html += `<div class="section-label">Sport du jour</div><div class="list">`;
   if(sportAujourdhui.length===0){
     html += `<div class="empty">Pas de séance de sport prévue aujourd'hui.</div>`;
@@ -930,7 +950,6 @@ function renderToday(page){
   page.innerHTML = html;
 }
 
-/* ---------- COURS (agenda par semaine) ---------- */
 function renderCours(page){
   page.innerHTML = `
     <h1 style="color:var(--cours)">Cours</h1>
@@ -1029,9 +1048,6 @@ async function addCours(){
   updateCounts();
 }
 
-/* ---------- REVISIONS ---------- */
-
-// Matières à ignorer dans les rotations de secours (pas de vrai cours ce jour-là)
 const EXCLUDE_MATIERE = ["Rentrées","Human Talks","Forum Stages","Rencontre partenariale","Visite entreprise","Spécialisation professionnelle","PIGE - Soutenances","Examens"];
 const SEM1_SUBJECTS = [
   "Bases de données avancées",
@@ -1091,7 +1107,6 @@ function buildDayPlan(dateObj){
   const tomorrowStr = toLocalISO(tomorrowObj);
   const tomorrowCourses = coursesOfDay(tomorrowStr);
   const tomorrowSubjects = [...new Set(tomorrowCourses.map(c=>c.matiere))];
-  // matières dont la séance de demain est un TP (nécessite une préparation spécifique)
   const tpSubjectsTomorrow = new Set(
     tomorrowCourses.filter(c => /\bTP\b/.test(c.type||"")).map(c=>c.matiere)
   );
@@ -1099,10 +1114,6 @@ function buildDayPlan(dateObj){
   const sport = sportOfDay(jourAbbrev);
   const lastEnd = courses.length ? courses[courses.length-1].heureFin : null;
   const blocks = [];
-
-  // Règle fixe : chaque jour, on réserve 1h pour relire les cours du jour, PUIS on révise
-  // TOUTES les matières du lendemain (aucune n'est sautée, même les jours chargés/sport —
-  // seule la durée par matière est resserrée si besoin).
   const TODAY_REREAD_MIN = 60;
 
   function prepBlock(subj){
@@ -1121,8 +1132,6 @@ function buildDayPlan(dateObj){
     };
   }
 
-  // Répartit un budget de temps entre TOUTES les matières de demain, sans jamais en sauter :
-  // 45-60 min/matière si le temps le permet, resserré (mini 20 min) sinon.
   function scheduleTomorrowRevision(blocks, startTime, tomorrowSorted, budgetMin){
     const perSubject = tomorrowSorted.length
       ? Math.max(20, Math.min(60, Math.floor(budgetMin / tomorrowSorted.length)))
@@ -1139,7 +1148,6 @@ function buildDayPlan(dateObj){
     return t;
   }
 
-  // Dimanche : bilan de la semaine + préparation de TOUTES les matières de lundi
   if(jourLong === "dimanche"){
     blocks.push({heure:"17h00 – 18h00", titre:"Bilan de la semaine", detail:"Repasser rapidement toutes les matières vues (relecture des fiches, pas de nouvelle matière).", type:"test"});
     const lundiSubjects = tomorrowSubjects.length ? tomorrowSubjects : [fallbackSubject(tomorrowObj)];
@@ -1157,7 +1165,7 @@ function buildDayPlan(dateObj){
 
   if(sport){
     const sportStart = sport.heure || "18:30";
-    const SPORT_DURATION = 75; // 1h15 : efficace pour une séance full body (échauffement + 6 exercices)
+    const SPORT_DURATION = 75;
     const sportEnd = addMinutes(sportStart, SPORT_DURATION);
     blocks.push({heure:`${sportStart} – ${sportEnd}`, titre:`Sport — ${sport.activite}`, type:"sport"});
 
@@ -1172,8 +1180,6 @@ function buildDayPlan(dateObj){
     blocks.push({heure:`${start} – ${r1}`, titre:`Relire ${todayLabel} (vu aujourd'hui)`, detail:"Relecture rapide du cours du jour + fiche de synthèse.", type:"revoir", matiere:today0});
     start = r1;
 
-    // Jour de sport : on révise quand même TOUTES les matières de demain (TP en priorité),
-    // avec un budget resserré (jusqu'à minuit) plutôt que d'en sauter certaines.
     const tomorrowList = tomorrowSubjects.length ? tomorrowSubjects : [fallbackSubject(tomorrowObj)];
     const tomorrowSorted = [...tomorrowList].sort((a,b)=> (tpSubjectsTomorrow.has(b)?1:0) - (tpSubjectsTomorrow.has(a)?1:0));
     const startMin = parseInt(start.split(":")[0],10)*60 + parseInt(start.split(":")[1],10);
@@ -1186,13 +1192,9 @@ function buildDayPlan(dateObj){
   const revStart = addMinutes(restStart, 60);
   blocks.push({heure:`${restStart} – ${revStart}`, titre:"Pause / repas / repos", type:"repos"});
 
-  // 1) 1h fixe de relecture des cours du jour, à chaud.
   const todayRevEnd = addMinutes(revStart, TODAY_REREAD_MIN);
   blocks.push({heure:`${revStart} – ${todayRevEnd}`, titre:`Relire ${todayLabel} (vu aujourd'hui)`, detail:"Relecture active du cours du jour, à chaud, + fiche de synthèse.", type:"revoir", matiere:today0});
 
-  // 2) Révision de TOUTES les matières de demain (TP en priorité), sans en sauter aucune :
-  // on vise un coucher vers minuit, en resserrant la durée par matière si la journée est chargée
-  // plutôt que d'en retirer certaines.
   const tomorrowList = tomorrowSubjects.length ? tomorrowSubjects : [fallbackSubject(tomorrowObj)];
   const tomorrowSorted = [...tomorrowList].sort((a,b)=> (tpSubjectsTomorrow.has(b)?1:0) - (tpSubjectsTomorrow.has(a)?1:0));
   const startMin = parseInt(todayRevEnd.split(":")[0],10)*60 + parseInt(todayRevEnd.split(":")[1],10);
@@ -1253,17 +1255,17 @@ function renderRevisionsList(){
 
 const BLOCK_COLOR = { sport:"var(--sport)", repos:"var(--muted)", revoir:"var(--revisions)", exercices:"var(--revisions)", test:"var(--revisions)", note:"var(--muted)" };
 
-// Associe une matière à la fiche de cours correspondante (clé de FICHES).
-// À enrichir au fur et à mesure que de nouvelles fiches sont ajoutées.
 const FICHE_BY_MATIERE = {
   "Bases de données avancées": ["bda-transactions", "bda-triggers", "bda-bdro", "bda-optim", "bda-nosql"],
   "Ingénierie des Interfaces Humain-Machine (IHM)": ["ihm-chap1", "ihm-chap2", "ihm-chap4", "ihm-chap5", "ihm-chap6", "ihm-chap7"],
   "Cloud computing": ["cloud-intro", "cloud-git", "cloud-virt", "cloud-cicd"],
   "Patrons et composants": ["pc-intro", "pc-uml", "pc-java", "pc-test", "pc-sonar", "pc-dp-intro", "pc-dp-creation", "pc-dp-structurel", "pc-dp-comportement", "pc-antipattern", "pc-reactivite", "pc-spring", "pc-jpa", "pc-kotlin"],
-  "GL (Génie Logiciel)": ["gl-intro", "gl-acteurs", "gl-activites", "gl-cycles-de-vie"],
+  "GL (Génie Logiciel)": ["gl-intro", "gl-acteurs", "gl-activites", "gl-cycles-de-vie", "gl-gestion-projets"],
   "Analyse fontionnelle pour la modélisation de processus": ["afmp-merise"],
-  "Contrôle de gestion": ["cg-presentation", "cg-intro", "cg-decision", "cg-centres-analyse", "cg-stocks", "cg-modeles-eco", "cg-abc", "cg-seuil-rentabilite"]
+  "Contrôle de gestion": ["cg-presentation", "cg-intro", "cg-decision", "cg-centres-analyse", "cg-stocks", "cg-modeles-eco", "cg-abc", "cg-seuil-rentabilite"],
+  "Processus de développement et spécification formelle": ["pdl-temporalites", "pdl-intro-formelle", "pdl-notations-z", "pdl-partialites", "pdl-operations"]
 };
+
 let fichesFilterMatiere = null;
 function fichesForMatiere(matiere){
   return matiere ? (FICHE_BY_MATIERE[matiere] || []) : [];
@@ -1341,7 +1343,6 @@ async function addRevision(){
   updateCounts();
 }
 
-/* ---------- ALTERNANCE ---------- */
 function renderAlternance(page){
   page.innerHTML = `
     <h1 style="color:var(--alternance)">Alternance</h1>
@@ -1390,7 +1391,6 @@ async function addAlternance(){
   updateCounts();
 }
 
-/* ---------- SPORT ---------- */
 const SPORT_DETAIL = {
   "sport0": {
     label: "Jambes & poussée",
@@ -1485,7 +1485,6 @@ async function addSport(){
   updateCounts();
 }
 
-/* ---------- FICHES DE COURS ---------- */
 let currentFicheId = null;
 let currentFicheTab = "resume";
 let FICHE_PROGRESS = {};
@@ -1504,7 +1503,6 @@ function isFicheDone(ficheKey){
   return !!(FICHE_PROGRESS[ficheKey] && FICHE_PROGRESS[ficheKey].done);
 }
 
-/* ---------- Prise de notes personnelles, par fiche ---------- */
 let FICHE_NOTES = {};
 let NOTE_SAVE_TIMER = null;
 
@@ -1559,7 +1557,6 @@ function renderNotesList(){
       return f.matiere.toLowerCase().includes(q) || f.chapitre.toLowerCase().includes(q) || noteFor(k).toLowerCase().includes(q);
     });
   }
-  // Regroupe par matière, trie par date de note la plus récente d'abord
   keys = [...keys].sort((a,b) => (FICHE_NOTES[b].date||"").localeCompare(FICHE_NOTES[a].date||""));
 
   if(keys.length === 0){
@@ -1581,7 +1578,6 @@ function renderNotesList(){
     </div>`;
   }).join("");
 }
-
 
 function renderFiches(page){
   if(currentFicheId && FICHES[currentFicheId]){
@@ -1681,8 +1677,6 @@ function renderFicheDetail(page, key){
   `;
 }
 
-// Recherche "dans la page" : surligne les passages correspondants au sein de la fiche actuellement
-// ouverte (résumé / fiche de révision / corrigés), sans jamais altérer les diagrammes SVG.
 function filterFicheDetailContent(){
   const container = document.getElementById("fiche-content-body");
   const countEl = document.getElementById("fd-search-count");
@@ -1703,7 +1697,7 @@ function filterFicheDetailContent(){
   }
 
   function walk(node){
-    if(node.nodeType === 3){ // #text
+    if(node.nodeType === 3){
       if(node.nodeValue.trim().length===0) return;
       if(isMatch(node.nodeValue)){
         const span = document.createElement("span");
@@ -1713,7 +1707,7 @@ function filterFicheDetailContent(){
       }
     } else if(node.nodeType === 1){
       const tag = (node.tagName||"").toLowerCase();
-      if(tag === "svg" || tag === "script" || tag === "style") return; // ne jamais toucher aux diagrammes
+      if(tag === "svg" || tag === "script" || tag === "style") return;
       Array.from(node.childNodes).forEach(walk);
     }
   }
@@ -1724,8 +1718,6 @@ function filterFicheDetailContent(){
   if(firstMark && firstMark.scrollIntoView) firstMark.scrollIntoView({behavior:"smooth", block:"center"});
 }
 
-
-/* ---------- PROGRESSION (suivi global + par jour) ---------- */
 function renderProgression(page){
   const matieres = Object.keys(FICHE_BY_MATIERE);
   let totalFiches = 0, totalDone = 0;
@@ -1793,7 +1785,6 @@ function renderProgressionBody(){
     });
   }
 
-  // Historique par jour
   const byDate = {};
   Object.keys(FICHE_PROGRESS).forEach(k=>{
     const entry = FICHE_PROGRESS[k];
@@ -1832,7 +1823,6 @@ function openFicheDirect(key){
   switchTab("fiches");
 }
 
-/* ---------- FICHIERS DE COURS (catalogue brut) ---------- */
 const MATIERE_LABEL = {
   "BDA": "Bases de données avancées",
   "IHM": "Ingénierie des Interfaces Humain-Machine (IHM)",
@@ -1840,11 +1830,12 @@ const MATIERE_LABEL = {
   "PC": "Patrons et composants",
   "GL": "GL (Génie Logiciel)",
   "AFMP": "Analyse fontionnelle pour la modélisation de processus",
-  "CG": "Contrôle de gestion"
+  "CG": "Contrôle de gestion",
+  "PDL": "Processus de développement et spécification formelle"
 };
 
-// Association fichier source -> fiche déjà rédigée (uniquement les fichiers traités jusqu'ici)
 const FILE_TO_FICHE = {
+  /* ... TES ANCIENNES LIAISONS DE FICHIERS (de 'kotlin.pdf' jusqu'à '4.Cycles de vie2020.pdf') ... */
   "kotlin.pdf": "pc-kotlin",
   "Cours-fondamentaux-Spring.pdf": "pc-spring",
   "Cours-JPA.pdf": "pc-jpa",
@@ -1898,7 +1889,15 @@ const FILE_TO_FICHE = {
   "1_IntroGL2020.pdf": "gl-intro",
   "2_Acteurs_projet2020.pdf": "gl-acteurs",
   "3.Activites2020_handout.pdf": "gl-activites",
-  "4.Cycles de vie2020.pdf": "gl-cycles-de-vie"
+  "4.Cycles de vie2020.pdf": "gl-cycles-de-vie",
+  
+  // --- NOUVELLES LIAISONS ---
+  "5. Gestion-projets.pdf": "gl-gestion-projets",
+  "6. Temporalites pour UML.pdf": "pdl-temporalites",
+  "7. Spécification formelle.pdf": "pdl-intro-formelle",
+  "8. Concepts et notations Z.pdf": "pdl-notations-z",
+  "9._Partialites.pdf": "pdl-partialites",
+  "10. Operations.pdf": "pdl-operations"
 };
 
 function openSourceFile(filename){
@@ -1924,9 +1923,6 @@ function renderSources(page){
   renderSourcesList();
 }
 
-// Cherche le premier passage du contenu d'une fiche qui contient la requête (recherche plein texte,
-// pas seulement sur le nom de fichier/matière/chapitre) — permet de retrouver un PDF à partir d'une
-// notion qu'il contient, même si le mot n'apparaît ni dans son nom ni dans son titre de chapitre.
 function rqFicheContentMatch(ficheKey, qNorm){
   if(!ficheKey || !qNorm) return null;
   const chunks = rqBuildIndex().filter(c=>c.ficheKey===ficheKey);
@@ -1988,7 +1984,6 @@ function renderSourcesList(){
   content.innerHTML = html;
 }
 
-
 function itemHtml(item, cat, meta, title, extra, highlight){
   const openFn = cat==="revisions" ? "openRevisionDetail" : cat==="alternance" ? "openAlternanceDetail" : "openSportDetail";
   return `<div class="item clickable ${item.done?"done":""} ${highlight?"today-highlight":""}" onclick="${openFn}('${item.id}')">
@@ -2014,7 +2009,6 @@ async function deleteItem(cat, id){
   render();
 }
 
-/* ---------- DÉTAIL (grande section au clic) ---------- */
 function closeDetail(){
   document.getElementById("detail-overlay").classList.add("hidden");
 }
@@ -2093,18 +2087,6 @@ function openSportDetail(id){
   ], extra);
 }
 
-
-/* ================================================================
-   RECHERCHE — mini-RAG local sur les fiches de cours
-   Fonctionne 100% hors-ligne par défaut : indexe le texte de toutes
-   les fiches (résumé + fiche de révision + corrigés) déjà présentes
-   dans l'app, retrouve les passages les plus pertinents pour une
-   question donnée, et affiche le(s) fichier(s) source(s) exact(s).
-   Une clé API Anthropic optionnelle (facultative, stockée en local)
-   permet en plus d'obtenir une synthèse rédigée par Claude à partir
-   de ces mêmes passages retrouvés.
-   ================================================================ */
-
 const RQ_STOPWORDS = new Set([
   "le","la","les","un","une","des","de","du","d","l","et","ou","est","es","sont","dans","pour","sur","avec",
   "que","qui","quoi","ce","cet","cette","ces","en","au","aux","il","elle","ils","elles","plus","comment",
@@ -2139,7 +2121,6 @@ function rqBuildFileMap(){
   return RQ_FILE_MAP;
 }
 
-// Découpe le HTML d'un champ de fiche en "chunks" (un par section/paragraphe/ligne de liste)
 function rqSplitChunks(html){
   const div = document.createElement("div");
   div.innerHTML = html;
@@ -2149,9 +2130,6 @@ function rqSplitChunks(html){
   div.querySelectorAll(blockSelector).forEach(el=>{
     let text = (el.textContent||"").trim();
     if(text.length <= 8) return;
-    // Un titre seul (h3/h4/.fbx-title) n'est pas une réponse utile : on l'enrichit avec le
-    // contenu qui le suit immédiatement (ex: la vraie liste des "4 principes"), pour que le
-    // passage retenu contienne l'information, pas seulement l'intitulé de la section.
     const isTitleLike = headingLike.has(el.tagName) || (el.className && el.className.indexOf && el.className.indexOf("fbx-title")>=0);
     if(isTitleLike && el.nextElementSibling){
       const sibText = (el.nextElementSibling.textContent||"").trim();
@@ -2181,8 +2159,6 @@ function rqBuildIndex(){
       });
     });
   });
-  // calcule l'IDF (importance) de chaque terme sur l'ensemble du corpus indexé,
-  // pour que les termes rares et spécifiques pèsent plus que les mots très fréquents (ex: "coût")
   const df = {};
   RQ_INDEX.forEach(chunk=>{
     new Set(chunk.tokens).forEach(t=> df[t] = (df[t]||0)+1);
@@ -2200,17 +2176,13 @@ function rqScoreChunk(queryTokens, queryNorm, chunk){
   let score = 0;
   const freq = {};
   chunk.tokens.forEach(t=> freq[t] = (freq[t]||0)+1);
-  // TF-IDF : compte pondéré par la rareté du terme dans l'ensemble du corpus
   queryTokens.forEach(qt=>{
     if(freq[qt]) score += (1 + Math.log(1+freq[qt])) * rqIdf(qt);
   });
-  // bonus si le terme apparaît dans le nom du chapitre ou de la matière (contexte très fiable)
   const ctxTokens = rqTokenize(chunk.matiere + " " + chunk.chapitre);
   queryTokens.forEach(qt=>{ if(ctxTokens.includes(qt)) score += 2 * rqIdf(qt); });
-  // bonus fort si la phrase de la question apparaît (quasi) telle quelle dans le passage
   const chunkNorm = rqNormalize(chunk.text);
   if(queryNorm.length > 4 && chunkNorm.includes(queryNorm)) score += 8;
-  // bonus si des bigrammes consécutifs de la question se retrouvent dans le passage
   for(let i=0;i<queryTokens.length-1;i++){
     const bigram = queryTokens[i]+" "+queryTokens[i+1];
     if(chunkNorm.includes(bigram)) score += 2;
@@ -2238,7 +2210,6 @@ function rqSearch(query){
     .filter(x=>x.score>0)
     .sort((a,b)=>b.score-a.score);
 
-  // regroupe par fiche, garde les 3 meilleurs extraits par fiche
   const byFiche = {};
   scored.forEach(({chunk,score})=>{
     if(!byFiche[chunk.ficheKey]) byFiche[chunk.ficheKey] = {ficheKey:chunk.ficheKey, matiere:chunk.matiere, chapitre:chunk.chapitre, bestScore:0, snippets:[]};
@@ -2254,16 +2225,12 @@ function rqSearch(query){
   });
 }
 
-// Sélectionne LE contexte le plus pertinent pour la question : une seule fiche/source,
-// pas un mélange de plusieurs — c'est ça, la "contextualisation de la requête".
 function rqPickBestContext(query){
   const results = rqSearch(query);
   if(!results.length) return null;
   return results[0];
 }
 
-// Construit une réponse locale (extractive) strictement à partir du contexte choisi —
-// aucun appel réseau, donc toujours disponible et sans aucun risque d'invention.
 function rqBuildLocalAnswer(query, context){
   const candidates = context.snippets.slice().sort((a,b)=> b.score-a.score);
   const good = candidates.filter(s=>s.text.length>=25);
@@ -2283,8 +2250,6 @@ function rqToggleKeyBox(){
   box.style.display = box.style.display==="none" ? "block" : "none";
 }
 
-// Construit le bloc HTML de LA réponse unique (locale ou Claude), toujours avec le chemin exact
-// du fichier source d'où elle a été puisée.
 function rqRenderAnswerBlock(title, bodyHtml, context){
   const filesLine = context.files.length
     ? context.files.map(f=>`<code>${escapeHtml(f)}</code>`).join(", ")
@@ -2296,8 +2261,6 @@ function rqRenderAnswerBlock(title, bodyHtml, context){
     <button class="sr-open" style="margin-top:10px;" onclick="openFicheDirect('${context.ficheKey}')">Voir la fiche complète →</button>`;
 }
 
-// Interroge Claude en le contextualisant STRICTEMENT sur la source unique retrouvée
-// (pas de mélange d'autres fiches) pour obtenir la réponse la plus juste possible.
 async function rqFetchClaudeAnswer(query, context){
   const key = rqApiKey();
   const contextText = `Source unique (${context.files.join(", ") || context.ficheKey}) — ${context.matiere} — ${context.chapitre} :\n` +
@@ -2346,13 +2309,10 @@ async function runSearch(){
   }
   resultsEl.innerHTML = "";
 
-  // 1) Réponse locale immédiate, contextualisée sur cette seule source — toujours fiable.
   const localBody = rqBuildLocalAnswer(query, context) || "Aucun passage suffisamment clair n'a été isolé, mais cette fiche est la plus proche du sujet de ta question.";
   answerEl.style.display = "block";
   answerEl.innerHTML = rqRenderAnswerBlock("📝 Réponse (d'après tes fiches)", localBody, context);
 
-  // 2) Si une clé API est configurée, tente de l'améliorer avec une réponse rédigée par Claude,
-  // contextualisée sur cette MÊME source unique — et la remplace en cas de succès.
   const key = rqApiKey();
   if(key){
     const loadingNote = document.createElement("div");
@@ -2391,7 +2351,6 @@ function renderRecherche(page){
     <div id="recherche-results"><div class="search-empty">Pose une question sur un de tes cours (ex : « comment calculer le seuil de rentabilité ? », « différence MCD MLD », « répartition primaire secondaire »…).</div></div>
   `;
 }
-
 
 loadAll();
 </script>
